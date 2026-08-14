@@ -1,0 +1,878 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #fff8ef;
+
+    color: #2c2118;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   COLOR VARIABLES
+========================= */
+
+:root {
+
+    --cream: #fff8ef;
+
+    --cream-dark: #f4e6d2;
+
+    --brown: #2c2118;
+
+    --brown-light: #6d5b4b;
+
+    --orange: #d97706;
+
+    --orange-light: #f59e0b;
+
+    --white: #ffffff;
+
+}
+
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+
+    width: 100%;
+
+    background: rgba(255, 248, 239, 0.95);
+
+    border-bottom: 1px solid #eadbc8;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+.nav-container {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 20px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    color: var(--brown);
+
+    text-decoration: none;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+}
+
+
+.logo span {
+
+    color: var(--orange);
+
+}
+
+
+.nav-links {
+
+    list-style: none;
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+.nav-links a {
+
+    color: var(--brown);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: var(--orange);
+
+}
+
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+
+    max-width: 1150px;
+
+    min-height: 650px;
+
+    margin: auto;
+
+    padding: 90px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+}
+
+
+.hero-content {
+
+    max-width: 650px;
+
+}
+
+
+.eyebrow {
+
+    color: var(--orange);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(50px, 7vw, 88px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--orange);
+
+    display: block;
+
+}
+
+
+.hero-description {
+
+    max-width: 520px;
+
+    color: var(--brown-light);
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-button {
+
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: var(--brown);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    border-radius: 50px;
+
+    transition: 0.3s;
+
+}
+
+
+.hero-button:hover {
+
+    background: var(--orange);
+
+    transform: translateY(-3px);
+
+}
+
+
+
+/* =========================
+   HERO FOOD CIRCLE
+========================= */
+
+.hero-decoration {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.food-circle {
+
+    width: 330px;
+
+    height: 330px;
+
+    background: var(--orange);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 130px;
+
+    box-shadow:
+        20px 20px 0 var(--cream-dark);
+
+}
+
+
+.food-circle span {
+
+    display: block;
+
+}
+
+
+
+/* =========================
+   PLACES SECTION
+========================= */
+
+.places-section {
+
+    background: var(--brown);
+
+    color: white;
+
+    padding: 100px 30px;
+
+}
+
+
+.section-heading {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    margin-bottom: 50px;
+
+}
+
+
+.section-heading .eyebrow {
+
+    color: var(--orange-light);
+
+}
+
+
+.section-heading h2 {
+
+    font-size: clamp(40px, 6vw, 65px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-heading h2 span {
+
+    color: var(--orange-light);
+
+}
+
+
+.section-heading > p:last-child {
+
+    color: #cdbfac;
+
+    max-width: 550px;
+
+}
+
+
+
+/* =========================
+   FOOD GRID
+========================= */
+
+.food-grid {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+
+/* =========================
+   FOOD CARD
+========================= */
+
+.food-card {
+
+    background: var(--white);
+
+    color: var(--brown);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+}
+
+
+.food-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+/* =========================
+   FOOD IMAGE
+========================= */
+
+.food-image {
+
+    height: 240px;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/*
+    Actual restaurant photo
+*/
+
+.food-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+/*
+    Photo zoom when hovering
+*/
+
+.food-card:hover
+.food-image img {
+
+    transform: scale(1.08);
+
+}
+
+
+
+/* =========================
+   BACKGROUND COLORS
+========================= */
+
+.mami-image {
+
+    background: #f8d9b0;
+
+}
+
+
+.seddie-image {
+
+    background: #ead4b8;
+
+}
+
+
+.goto-image {
+
+    background: #f3c889;
+
+}
+
+
+
+/* =========================
+   FOOD INFORMATION
+========================= */
+
+.food-info {
+
+    padding: 28px;
+
+}
+
+
+.food-number {
+
+    color: var(--orange);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.food-info h3 {
+
+    font-size: 25px;
+
+    margin:
+        8px 0 12px;
+
+}
+
+
+.food-info > p:not(.food-number) {
+
+    color: var(--brown-light);
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.food-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+}
+
+
+.food-meta span {
+
+    background: var(--cream-dark);
+
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================
+   ABOUT ME SECTION
+========================= */
+
+.about-section {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 120px 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        350px 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+
+
+/* =========================
+   YOUR PHOTO
+========================= */
+
+.about-image {
+
+    width: 100%;
+
+}
+
+
+.about-image img {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    display: block;
+
+    box-shadow:
+        15px 15px 0 var(--orange);
+
+}
+
+
+
+/* =========================
+   ABOUT TEXT
+========================= */
+
+.about-content h2 {
+
+    font-size:
+        clamp(40px, 5vw, 60px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.about-content h2 span {
+
+    color: var(--orange);
+
+}
+
+
+.about-content p:not(.eyebrow) {
+
+    color: var(--brown-light);
+
+    margin-bottom: 15px;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #1d1510;
+
+    color: #cdbfac;
+
+    padding: 45px 30px;
+
+}
+
+
+.footer-content {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+footer .logo {
+
+    color: white;
+
+}
+
+
+footer p {
+
+    font-size: 13px;
+
+}
+
+
+.copyright {
+
+    text-align: right;
+
+}
+
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+
+    .nav-container {
+
+        padding: 18px 20px;
+
+    }
+
+
+    .nav-links {
+
+        gap: 15px;
+
+    }
+
+
+    .hero {
+
+        min-height: auto;
+
+        padding: 80px 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 58px;
+
+    }
+
+
+    .food-circle {
+
+        width: 240px;
+
+        height: 240px;
+
+        font-size: 90px;
+
+    }
+
+
+    .food-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+    }
+
+
+    .about-section {
+
+        grid-template-columns: 1fr;
+
+        max-width: 550px;
+
+        padding: 80px 25px;
+
+    }
+
+
+    .about-image {
+
+        max-width: 300px;
+
+    }
+
+
+    .footer-content {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .copyright {
+
+        text-align: left;
+
+    }
+
+}
+
+
+
+/* =========================
+   SMALL MOBILE PHONE
+========================= */
+
+@media (max-width: 500px) {
+
+
+    .nav-links {
+
+        gap: 10px;
+
+    }
+
+
+    .nav-links a {
+
+        font-size: 12px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 16px;
+
+    }
+
+
+    .places-section {
+
+        padding: 80px 20px;
+
+    }
+
+
+    .section-heading h2 {
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .food-image {
+
+        height: 220px;
+
+    }
+
+
+    .food-info h3 {
+
+        font-size: 23px;
+
+    }
+
+}
