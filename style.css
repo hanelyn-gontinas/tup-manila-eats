@@ -15,14 +15,20 @@ html {
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
     background: #fff8ef;
 
     color: #2c2118;
 
     line-height: 1.6;
+
 }
+
 
 
 /* =========================
@@ -57,9 +63,16 @@ body {
 
     width: 100%;
 
-    background: rgba(255, 248, 239, 0.95);
+    background:
+        rgba(
+            255,
+            248,
+            239,
+            0.96
+        );
 
-    border-bottom: 1px solid #eadbc8;
+    border-bottom:
+        1px solid #eadbc8;
 
     position: sticky;
 
@@ -192,7 +205,12 @@ body {
 
 .hero h1 {
 
-    font-size: clamp(50px, 7vw, 88px);
+    font-size:
+        clamp(
+            50px,
+            7vw,
+            88px
+        );
 
     line-height: 0.95;
 
@@ -250,7 +268,8 @@ body {
 
     background: var(--orange);
 
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 
 }
 
@@ -290,7 +309,8 @@ body {
     font-size: 130px;
 
     box-shadow:
-        20px 20px 0 var(--cream-dark);
+        20px 20px 0
+        var(--cream-dark);
 
 }
 
@@ -338,7 +358,12 @@ body {
 
 .section-heading h2 {
 
-    font-size: clamp(40px, 6vw, 65px);
+    font-size:
+        clamp(
+            40px,
+            6vw,
+            65px
+        );
 
     line-height: 1;
 
@@ -360,7 +385,7 @@ body {
 
     color: #cdbfac;
 
-    max-width: 550px;
+    max-width: 650px;
 
 }
 
@@ -401,17 +426,26 @@ body {
 
     overflow: hidden;
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 
 }
 
 
 .food-card:hover {
 
-    transform: translateY(-8px);
+    transform:
+        translateY(-8px);
 
     box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.2);
+        0 20px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.2
+        );
 
 }
 
@@ -423,24 +457,18 @@ body {
 
 .food-image {
 
-    height: 240px;
-
     width: 100%;
+
+    height: 240px;
 
     overflow: hidden;
 
-    display: flex;
+    display: block;
 
-    align-items: center;
-
-    justify-content: center;
+    background: #ead4b8;
 
 }
 
-
-/*
-    Actual restaurant photo
-*/
 
 .food-image img {
 
@@ -450,6 +478,8 @@ body {
 
     object-fit: cover;
 
+    object-position: center;
+
     display: block;
 
     transition:
@@ -458,14 +488,11 @@ body {
 }
 
 
-/*
-    Photo zoom when hovering
-*/
-
 .food-card:hover
 .food-image img {
 
-    transform: scale(1.08);
+    transform:
+        scale(1.08);
 
 }
 
@@ -518,6 +545,8 @@ body {
 
     letter-spacing: 2px;
 
+    margin-bottom: 6px;
+
 }
 
 
@@ -525,22 +554,55 @@ body {
 
     font-size: 25px;
 
-    margin:
-        8px 0 12px;
+    line-height: 1.2;
+
+    margin-bottom: 12px;
 
 }
 
 
-.food-info > p:not(.food-number) {
+
+/* =========================
+   FOOD LOCATION
+========================= */
+
+.food-location {
+
+    color: var(--orange);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+/* =========================
+   FOOD RECOMMENDATION
+========================= */
+
+.food-description {
 
     color: var(--brown-light);
 
     font-size: 14px;
 
-    margin-bottom: 20px;
+    line-height: 1.75;
+
+    margin-bottom: 22px;
 
 }
 
+
+
+/* =========================
+   FOOD META
+========================= */
 
 .food-meta {
 
@@ -613,12 +675,15 @@ body {
 
     object-fit: cover;
 
+    object-position: center;
+
     border-radius: 25px;
 
     display: block;
 
     box-shadow:
-        15px 15px 0 var(--orange);
+        15px 15px 0
+        var(--orange);
 
 }
 
@@ -631,7 +696,11 @@ body {
 .about-content h2 {
 
     font-size:
-        clamp(40px, 5vw, 60px);
+        clamp(
+            40px,
+            5vw,
+            60px
+        );
 
     line-height: 1;
 
@@ -818,6 +887,21 @@ footer p {
 @media (max-width: 500px) {
 
 
+    .nav-container {
+
+        padding:
+            16px 18px;
+
+    }
+
+
+    .logo {
+
+        font-size: 21px;
+
+    }
+
+
     .nav-links {
 
         gap: 10px;
@@ -828,6 +912,14 @@ footer p {
     .nav-links a {
 
         font-size: 12px;
+
+    }
+
+
+    .hero {
+
+        padding:
+            70px 20px;
 
     }
 
@@ -848,9 +940,31 @@ footer p {
     }
 
 
+    .hero-button {
+
+        padding:
+            13px 21px;
+
+        font-size: 14px;
+
+    }
+
+
+    .food-circle {
+
+        width: 210px;
+
+        height: 210px;
+
+        font-size: 80px;
+
+    }
+
+
     .places-section {
 
-        padding: 80px 20px;
+        padding:
+            80px 20px;
 
     }
 
@@ -862,6 +976,27 @@ footer p {
     }
 
 
+    .section-heading > p:last-child {
+
+        font-size: 14px;
+
+    }
+
+
+    .food-grid {
+
+        width: 100%;
+
+    }
+
+
+    .food-card {
+
+        border-radius: 16px;
+
+    }
+
+
     .food-image {
 
         height: 220px;
@@ -869,9 +1004,62 @@ footer p {
     }
 
 
+    .food-info {
+
+        padding: 23px;
+
+    }
+
+
     .food-info h3 {
 
         font-size: 23px;
+
+    }
+
+
+    .food-location {
+
+        font-size: 13px;
+
+    }
+
+
+    .food-description {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .about-section {
+
+        padding:
+            80px 20px;
+
+    }
+
+
+    .about-image {
+
+        max-width: 280px;
+
+    }
+
+
+    .about-content h2 {
+
+        letter-spacing: -2px;
+
+    }
+
+
+    footer {
+
+        padding:
+            40px 20px;
 
     }
 
