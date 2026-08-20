@@ -1,6 +1,12 @@
-/* =========================
-   BASIC RESET
-========================= */
+/* =====================================================
+   TUP EATS
+   Affordable Eats Near TUP Manila
+===================================================== */
+
+
+/* =====================================================
+   RESET & GLOBAL
+===================================================== */
 
 * {
     margin: 0;
@@ -15,1052 +21,925 @@ html {
 
 
 body {
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family: "Poppins", Arial, sans-serif;
     background: #fff8ef;
-
     color: #2c2118;
-
     line-height: 1.6;
-
 }
 
 
+img {
+    display: block;
+    max-width: 100%;
+}
 
-/* =========================
-   COLOR VARIABLES
-========================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   COLORS
+===================================================== */
 
 :root {
 
     --cream: #fff8ef;
-
-    --cream-dark: #f4e6d2;
-
+    --cream-dark: #f7eadb;
     --brown: #2c2118;
-
-    --brown-light: #6d5b4b;
-
+    --brown-light: #6f5a48;
     --orange: #d97706;
-
-    --orange-light: #f59e0b;
-
+    --orange-dark: #b45309;
     --white: #ffffff;
+    --border: #eadbc9;
 
 }
 
 
-
-/* =========================
+/* =====================================================
    NAVIGATION
-========================= */
+===================================================== */
 
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
     width: 100%;
 
-    background:
-        rgba(
-            255,
-            248,
-            239,
-            0.96
-        );
+    background: rgba(255, 248, 239, 0.96);
 
-    border-bottom:
-        1px solid #eadbc8;
+    border-bottom: 1px solid var(--border);
 
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
-
+    backdrop-filter: blur(12px);
 }
 
 
 .nav-container {
+    width: min(1180px, 92%);
 
-    max-width: 1150px;
+    margin: 0 auto;
 
-    margin: auto;
-
-    padding: 20px 30px;
+    min-height: 82px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
+    gap: 40px;
 }
 
 
+/* LOGO */
+
 .logo {
+    display: inline-block;
 
-    color: var(--brown);
-
-    text-decoration: none;
-
-    font-size: 25px;
-
+    font-size: 1.6rem;
     font-weight: 800;
 
-    letter-spacing: -1px;
+    letter-spacing: -0.04em;
 
+    color: var(--brown);
 }
 
 
 .logo span {
-
     color: var(--orange);
+}
 
+
+/* NAVIGATION LINKS */
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 
 .nav-links {
-
     list-style: none;
 
     display: flex;
+    align-items: center;
 
-    gap: 30px;
+    gap: 34px;
+}
 
+
+.nav-links li {
+    list-style: none;
 }
 
 
 .nav-links a {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 8px 0;
+
+    font-size: 0.95rem;
+    font-weight: 600;
 
     color: var(--brown);
 
-    text-decoration: none;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
 
-    font-size: 14px;
 
-    font-weight: 600;
+.nav-links a::after {
+    content: "";
 
-    transition: 0.3s;
+    position: absolute;
 
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--orange);
+
+    transition: width 0.3s ease;
 }
 
 
 .nav-links a:hover {
-
     color: var(--orange);
-
 }
 
 
+.nav-links a:hover::after {
+    width: 100%;
+}
 
-/* =========================
-   HERO SECTION
-========================= */
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero {
+    position: relative;
 
-    max-width: 1150px;
+    min-height: 680px;
 
-    min-height: 650px;
+    width: 100%;
 
-    margin: auto;
-
-    padding: 90px 30px;
+    overflow: hidden;
 
     display: flex;
-
     align-items: center;
 
-    justify-content: space-between;
-
-    gap: 60px;
-
+    padding: 90px 7%;
 }
 
 
 .hero-content {
+    position: relative;
+    z-index: 2;
 
     max-width: 650px;
-
 }
 
 
 .eyebrow {
+    margin-bottom: 18px;
 
     color: var(--orange);
 
-    font-size: 12px;
-
+    font-size: 0.8rem;
     font-weight: 800;
 
-    letter-spacing: 2px;
+    letter-spacing: 0.16em;
 
-    margin-bottom: 18px;
-
+    text-transform: uppercase;
 }
 
 
 .hero h1 {
+    margin-bottom: 24px;
 
-    font-size:
-        clamp(
-            50px,
-            7vw,
-            88px
-        );
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
 
     line-height: 0.95;
 
-    letter-spacing: -4px;
+    letter-spacing: -0.065em;
 
-    margin-bottom: 30px;
-
+    color: var(--brown);
 }
 
 
 .hero h1 span {
-
     color: var(--orange);
-
-    display: block;
-
 }
 
 
 .hero-description {
+    max-width: 560px;
 
-    max-width: 520px;
+    margin-bottom: 32px;
 
     color: var(--brown-light);
 
-    font-size: 18px;
-
-    margin-bottom: 35px;
-
+    font-size: 1.05rem;
 }
 
 
 .hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    display: inline-block;
+    padding: 15px 24px;
 
-    padding: 15px 25px;
+    border-radius: 999px;
 
     background: var(--brown);
-
-    color: white;
-
-    text-decoration: none;
+    color: var(--white);
 
     font-weight: 700;
 
-    border-radius: 50px;
-
-    transition: 0.3s;
-
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
 }
 
 
 .hero-button:hover {
+    transform: translateY(-3px);
 
     background: var(--orange);
-
-    transform:
-        translateY(-3px);
-
 }
 
 
-
-/* =========================
-   HERO FOOD CIRCLE
-========================= */
+/* HERO DECORATION */
 
 .hero-decoration {
+    position: absolute;
 
-    display: flex;
+    right: 5%;
+    top: 50%;
 
-    justify-content: center;
-
-    align-items: center;
-
+    transform: translateY(-50%);
 }
 
 
 .food-circle {
-
-    width: 330px;
-
-    height: 330px;
-
-    background: var(--orange);
+    width: 390px;
+    height: 390px;
 
     border-radius: 50%;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
-    font-size: 130px;
+    background: var(--orange);
 
     box-shadow:
-        20px 20px 0
-        var(--cream-dark);
-
+        0 30px 70px rgba(44, 33, 24, 0.15);
 }
 
 
 .food-circle span {
-
-    display: block;
-
+    font-size: 8rem;
 }
 
 
-
-/* =========================
-   PLACES SECTION
-========================= */
+/* =====================================================
+   PLACES
+===================================================== */
 
 .places-section {
+    padding: 110px 7%;
 
-    background: var(--brown);
-
-    color: white;
-
-    padding: 100px 30px;
-
+    background: var(--white);
 }
 
 
 .section-heading {
+    max-width: 700px;
 
-    max-width: 1150px;
+    margin: 0 auto 55px;
 
-    margin: auto;
-
-    margin-bottom: 50px;
-
-}
-
-
-.section-heading .eyebrow {
-
-    color: var(--orange-light);
-
+    text-align: center;
 }
 
 
 .section-heading h2 {
+    margin-bottom: 20px;
 
-    font-size:
-        clamp(
-            40px,
-            6vw,
-            65px
-        );
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
 
     line-height: 1;
 
-    letter-spacing: -3px;
-
-    margin-bottom: 20px;
-
+    letter-spacing: -0.055em;
 }
 
 
 .section-heading h2 span {
-
-    color: var(--orange-light);
-
+    color: var(--orange);
 }
 
 
 .section-heading > p:last-child {
-
-    color: #cdbfac;
-
-    max-width: 650px;
-
+    color: var(--brown-light);
 }
 
 
-
-/* =========================
-   FOOD GRID
-========================= */
+/* FOOD GRID */
 
 .food-grid {
+    width: min(1180px, 100%);
 
-    max-width: 1150px;
-
-    margin: auto;
+    margin: 0 auto;
 
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3, minmax(0, 1fr));
 
-    gap: 25px;
-
+    gap: 28px;
 }
 
 
-
-/* =========================
-   FOOD CARD
-========================= */
+/* FOOD CARD */
 
 .food-card {
-
-    background: var(--white);
-
-    color: var(--brown);
-
-    border-radius: 20px;
-
     overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    background: var(--cream);
+
+    box-shadow:
+        0 14px 40px rgba(44, 33, 24, 0.07);
 
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
-
 }
 
 
 .food-card:hover {
-
-    transform:
-        translateY(-8px);
+    transform: translateY(-7px);
 
     box-shadow:
-        0 20px 40px
-        rgba(
-            0,
-            0,
-            0,
-            0.2
-        );
-
+        0 24px 55px rgba(44, 33, 24, 0.12);
 }
 
 
-
-/* =========================
-   FOOD IMAGE
-========================= */
+/* FOOD IMAGE */
 
 .food-image {
-
     width: 100%;
-
-    height: 240px;
+    height: 260px;
 
     overflow: hidden;
 
-    display: block;
-
-    background: #ead4b8;
-
+    background: var(--cream-dark);
 }
 
 
 .food-image img {
-
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
 
-    object-position: center;
-
-    display: block;
-
-    transition:
-        transform 0.5s ease;
-
+    transition: transform 0.5s ease;
 }
 
 
-.food-card:hover
-.food-image img {
-
-    transform:
-        scale(1.08);
-
+.food-card:hover .food-image img {
+    transform: scale(1.05);
 }
 
 
-
-/* =========================
-   BACKGROUND COLORS
-========================= */
-
-.mami-image {
-
-    background: #f8d9b0;
-
-}
-
-
-.seddie-image {
-
-    background: #ead4b8;
-
-}
-
-
-.goto-image {
-
-    background: #f3c889;
-
-}
-
-
-
-/* =========================
-   FOOD INFORMATION
-========================= */
+/* FOOD INFO */
 
 .food-info {
-
     padding: 28px;
-
 }
 
 
 .food-number {
+    margin-bottom: 8px;
 
     color: var(--orange);
 
-    font-size: 12px;
-
+    font-size: 0.8rem;
     font-weight: 800;
 
-    letter-spacing: 2px;
-
-    margin-bottom: 6px;
-
+    letter-spacing: 0.1em;
 }
 
 
 .food-info h3 {
+    margin-bottom: 10px;
 
-    font-size: 25px;
+    font-size: 1.6rem;
 
-    line-height: 1.2;
-
-    margin-bottom: 12px;
-
+    letter-spacing: -0.03em;
 }
 
-
-
-/* =========================
-   FOOD LOCATION
-========================= */
 
 .food-location {
+    margin-bottom: 18px;
 
-    color: var(--orange);
+    color: var(--orange-dark);
 
-    font-size: 13px;
-
+    font-size: 0.9rem;
     font-weight: 700;
-
-    line-height: 1.5;
-
-    margin-bottom: 15px;
-
 }
 
 
-
-/* =========================
-   FOOD RECOMMENDATION
-========================= */
-
 .food-description {
+    margin-bottom: 22px;
 
     color: var(--brown-light);
 
-    font-size: 14px;
-
-    line-height: 1.75;
-
-    margin-bottom: 22px;
-
+    font-size: 0.95rem;
 }
 
 
-
-/* =========================
-   FOOD META
-========================= */
-
 .food-meta {
-
     display: flex;
-
     flex-wrap: wrap;
 
-    gap: 8px;
-
+    gap: 10px;
 }
 
 
 .food-meta span {
+    display: inline-flex;
+
+    padding: 7px 11px;
+
+    border-radius: 999px;
 
     background: var(--cream-dark);
 
-    padding: 7px 10px;
+    color: var(--brown);
 
-    border-radius: 20px;
-
-    font-size: 11px;
-
+    font-size: 0.75rem;
     font-weight: 700;
-
 }
 
 
-
-/* =========================
-   ABOUT ME SECTION
-========================= */
+/* =====================================================
+   ABOUT PAGE / ABOUT SECTION
+===================================================== */
 
 .about-section {
+    width: min(1180px, 92%);
 
-    max-width: 1000px;
+    margin: 0 auto;
 
-    margin: auto;
-
-    padding: 120px 30px;
+    padding: 110px 0;
 
     display: grid;
 
     grid-template-columns:
-        350px 1fr;
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
 
     align-items: center;
 
-    gap: 70px;
-
+    gap: 80px;
 }
 
 
+.about-page {
+    min-height: calc(100vh - 82px);
+}
 
-/* =========================
-   YOUR PHOTO
-========================= */
 
 .about-image {
+    overflow: hidden;
 
-    width: 100%;
+    border-radius: 28px;
 
+    background: var(--cream-dark);
+
+    box-shadow:
+        0 20px 50px rgba(44, 33, 24, 0.1);
 }
 
 
 .about-image img {
-
     width: 100%;
 
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 5;
 
     object-fit: cover;
-
-    object-position: center;
-
-    border-radius: 25px;
-
-    display: block;
-
-    box-shadow:
-        15px 15px 0
-        var(--orange);
-
 }
 
 
-
-/* =========================
-   ABOUT TEXT
-========================= */
-
+.about-content h1,
 .about-content h2 {
+    margin-bottom: 28px;
 
-    font-size:
-        clamp(
-            40px,
-            5vw,
-            60px
-        );
+    font-size: clamp(2.7rem, 5vw, 4.8rem);
 
     line-height: 1;
 
-    letter-spacing: -3px;
-
-    margin-bottom: 25px;
-
+    letter-spacing: -0.055em;
 }
 
 
+.about-content h1 span,
 .about-content h2 span {
-
     color: var(--orange);
-
 }
 
 
 .about-content p:not(.eyebrow) {
+    margin-bottom: 20px;
 
     color: var(--brown-light);
 
-    margin-bottom: 15px;
-
+    font-size: 1rem;
 }
 
 
+/* =====================================================
+   CONTACT PAGE
+===================================================== */
 
-/* =========================
+.contact-section {
+    min-height: calc(100vh - 82px);
+
+    width: min(900px, 92%);
+
+    margin: 0 auto;
+
+    padding: 110px 0;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.contact-content {
+    width: 100%;
+
+    padding: 60px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 30px;
+
+    background: var(--white);
+
+    box-shadow:
+        0 20px 55px rgba(44, 33, 24, 0.08);
+}
+
+
+.contact-content h1 {
+    margin-bottom: 24px;
+
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.06em;
+}
+
+
+.contact-content h1 span {
+    color: var(--orange);
+}
+
+
+.contact-intro {
+    max-width: 650px;
+
+    margin-bottom: 35px;
+
+    color: var(--brown-light);
+
+    font-size: 1.05rem;
+}
+
+
+/* CONTACT LIST */
+
+.contact-list {
+    list-style: none;
+
+    display: grid;
+
+    gap: 16px;
+
+    margin-bottom: 30px;
+}
+
+
+.contact-list li {
+    padding: 20px 22px;
+
+    border-radius: 18px;
+
+    background: var(--cream);
+
+    border: 1px solid var(--border);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.contact-list strong {
+    color: var(--brown);
+
+    font-size: 0.8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+}
+
+
+.contact-list a {
+    color: var(--orange-dark);
+
+    font-weight: 700;
+
+    word-break: break-word;
+}
+
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+
+.contact-list span {
+    color: var(--brown-light);
+}
+
+
+.contact-note {
+    color: var(--brown-light);
+
+    font-size: 0.95rem;
+}
+
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
+    padding: 45px 7%;
 
-    background: #1d1510;
+    background: var(--brown);
 
-    color: #cdbfac;
-
-    padding: 45px 30px;
-
+    color: var(--white);
 }
 
 
 .footer-content {
+    width: min(1180px, 100%);
 
-    max-width: 1150px;
-
-    margin: auto;
+    margin: 0 auto;
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
 
-    gap: 30px;
+    justify-content: space-between;
 
+    gap: 30px;
 }
 
 
 footer .logo {
-
-    color: white;
-
+    color: var(--white);
 }
 
 
 footer p {
+    margin-top: 6px;
 
-    font-size: 13px;
-
+    color: rgba(255, 255, 255, 0.7);
 }
 
 
 .copyright {
+    font-size: 0.85rem;
 
     text-align: right;
-
 }
 
 
-
-/* =========================
+/* =====================================================
    TABLET
-========================= */
+===================================================== */
 
-@media (max-width: 800px) {
-
-
-    .nav-container {
-
-        padding: 18px 20px;
-
-    }
-
-
-    .nav-links {
-
-        gap: 15px;
-
-    }
-
+@media (max-width: 900px) {
 
     .hero {
-
         min-height: auto;
 
-        padding: 80px 20px;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
+        padding-top: 100px;
+        padding-bottom: 120px;
     }
 
 
-    .hero h1 {
+    .hero-decoration {
+        right: -120px;
 
-        font-size: 58px;
-
-    }
-
-
-    .food-circle {
-
-        width: 240px;
-
-        height: 240px;
-
-        font-size: 90px;
-
+        opacity: 0.35;
     }
 
 
     .food-grid {
-
-        grid-template-columns: 1fr;
-
-        max-width: 500px;
-
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
 
 
     .about-section {
-
         grid-template-columns: 1fr;
 
-        max-width: 550px;
-
-        padding: 80px 25px;
-
+        gap: 50px;
     }
 
 
     .about-image {
+        max-width: 600px;
 
-        max-width: 300px;
-
+        margin: 0 auto;
     }
 
 
-    .footer-content {
+    .about-content {
+        max-width: 750px;
 
-        flex-direction: column;
-
-        align-items: flex-start;
-
-    }
-
-
-    .copyright {
-
-        text-align: left;
-
+        margin: 0 auto;
     }
 
 }
 
 
+/* =====================================================
+   MOBILE
+===================================================== */
 
-/* =========================
-   SMALL MOBILE PHONE
-========================= */
-
-@media (max-width: 500px) {
-
+@media (max-width: 650px) {
 
     .nav-container {
+        min-height: 100px;
 
-        padding:
-            16px 18px;
+        flex-direction: column;
 
-    }
+        justify-content: center;
 
-
-    .logo {
-
-        font-size: 21px;
-
+        gap: 8px;
     }
 
 
     .nav-links {
-
-        gap: 10px;
-
+        gap: 20px;
     }
 
 
     .nav-links a {
-
-        font-size: 12px;
-
+        font-size: 0.85rem;
     }
 
 
     .hero {
-
-        padding:
-            70px 20px;
-
+        padding: 75px 6% 100px;
     }
 
 
     .hero h1 {
-
-        font-size: 48px;
-
-        letter-spacing: -2px;
-
+        font-size: clamp(3rem, 15vw, 4.5rem);
     }
 
 
     .hero-description {
-
-        font-size: 16px;
-
+        font-size: 0.95rem;
     }
 
 
-    .hero-button {
-
-        padding:
-            13px 21px;
-
-        font-size: 14px;
-
-    }
-
-
-    .food-circle {
-
-        width: 210px;
-
-        height: 210px;
-
-        font-size: 80px;
-
+    .hero-decoration {
+        display: none;
     }
 
 
     .places-section {
-
-        padding:
-            80px 20px;
-
-    }
-
-
-    .section-heading h2 {
-
-        letter-spacing: -2px;
-
-    }
-
-
-    .section-heading > p:last-child {
-
-        font-size: 14px;
-
+        padding: 80px 6%;
     }
 
 
     .food-grid {
-
-        width: 100%;
-
-    }
-
-
-    .food-card {
-
-        border-radius: 16px;
-
+        grid-template-columns: 1fr;
     }
 
 
     .food-image {
-
-        height: 220px;
-
-    }
-
-
-    .food-info {
-
-        padding: 23px;
-
-    }
-
-
-    .food-info h3 {
-
-        font-size: 23px;
-
-    }
-
-
-    .food-location {
-
-        font-size: 13px;
-
-    }
-
-
-    .food-description {
-
-        font-size: 14px;
-
-        line-height: 1.7;
-
+        height: 240px;
     }
 
 
     .about-section {
+        width: 88%;
 
-        padding:
-            80px 20px;
-
+        padding: 80px 0;
     }
 
 
-    .about-image {
-
-        max-width: 280px;
-
-    }
-
-
+    .about-content h1,
     .about-content h2 {
-
-        letter-spacing: -2px;
-
+        font-size: 3rem;
     }
 
 
-    footer {
+    .contact-section {
+        width: 88%;
 
-        padding:
-            40px 20px;
+        padding: 70px 0;
+    }
 
+
+    .contact-content {
+        padding: 35px 25px;
+
+        border-radius: 22px;
+    }
+
+
+    .contact-content h1 {
+        font-size: 3rem;
+    }
+
+
+    .footer-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .copyright {
+        text-align: left;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .nav-links {
+        gap: 14px;
+    }
+
+
+    .nav-links a {
+        font-size: 0.78rem;
+    }
+
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+
+    .hero h1 {
+        font-size: 2.9rem;
+    }
+
+
+    .section-heading h2 {
+        font-size: 2.7rem;
+    }
+
+
+    .food-info {
+        padding: 23px;
+    }
+
+
+    .contact-content h1 {
+        font-size: 2.7rem;
     }
 
 }
