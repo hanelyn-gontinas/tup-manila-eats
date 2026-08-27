@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,11 +11,6 @@
     >
 
     <title>Mami Karenderya | TUP Eats</title>
-
-    <!--
-        The detail page is inside the places folder,
-        so we need ../ to go back to the root folder.
-    -->
 
     <link
         rel="stylesheet"
@@ -37,13 +31,6 @@
 
         <div class="nav-container">
 
-
-            <!--
-                ../index.html means:
-                go up from places/ to the root,
-                then open index.html.
-            -->
-
             <a
                 href="../index.html"
                 class="logo"
@@ -55,7 +42,6 @@
             <nav aria-label="Main navigation">
 
                 <ul class="nav-links">
-
 
                     <li>
                         <a href="../index.html">
@@ -77,7 +63,6 @@
                         </a>
                     </li>
 
-
                 </ul>
 
             </nav>
@@ -96,14 +81,17 @@
 
 
         <!-- =========================
-             PLACE DETAIL HERO
+             PLACE DETAIL
         ========================== -->
 
         <section class="place-detail">
 
 
-            <div class="place-detail-header">
+            <!-- =========================
+                 PLACE HEADER
+            ========================== -->
 
+            <div class="place-detail-header">
 
                 <p class="eyebrow">
                     PLACE 01 • TUP EATS
@@ -123,13 +111,12 @@
 
                 </p>
 
-
             </div>
 
 
 
             <!-- =========================
-                 LARGE PLACE PHOTO
+                 PLACE PHOTO
             ========================== -->
 
             <div class="place-detail-image">
@@ -144,14 +131,17 @@
 
 
             <!-- =========================
-                 PLACE DESCRIPTION
+                 PLACE DESCRIPTION + DETAILS
             ========================== -->
 
             <section class="place-detail-content">
 
 
-                <div class="place-detail-description">
+                <!-- =========================
+                     DESCRIPTION
+                ========================== -->
 
+                <div class="place-detail-description">
 
                     <p class="eyebrow">
                         WHY I RECOMMEND IT
@@ -208,7 +198,6 @@
 
                     </p>
 
-
                 </div>
 
 
@@ -218,7 +207,6 @@
                 ========================== -->
 
                 <div class="place-details-box">
-
 
                     <p class="eyebrow">
                         QUICK DETAILS
@@ -232,12 +220,9 @@
 
                     <div class="details-table-wrapper">
 
-
                         <table>
 
-
                             <tbody>
-
 
                                 <tr>
 
@@ -318,11 +303,9 @@
 
                                 </tr>
 
-
                             </tbody>
 
                         </table>
-
 
                     </div>
 
@@ -337,9 +320,289 @@
 
                     </p>
 
-
                 </div>
 
+            </section>
+
+
+
+            <!-- =================================================
+                 SUGGEST-A-PLACE FORM
+            ================================================== -->
+
+            <section class="suggest-section">
+
+                <div class="suggest-card">
+
+
+                    <p class="eyebrow">
+                        HELP IMPROVE TUP EATS
+                    </p>
+
+
+                    <h2>
+                        Suggest a
+                        <span>place.</span>
+                    </h2>
+
+
+                    <p class="suggest-intro">
+
+                        Know an affordable place near TUP Manila
+                        that should be included in this guide?
+                        Tell me about it and help other students
+                        discover a new place to eat.
+
+                    </p>
+
+
+
+                    <!-- =========================
+                         SUGGEST FORM
+                    ========================== -->
+
+                    <form
+                        class="suggest-form"
+                        id="suggestForm"
+                        action=""
+                        method="get"
+                    >
+
+
+                        <!-- =========================
+                             PLACE NAME
+                        ========================== -->
+
+                        <div class="suggest-group">
+
+                            <label for="place-name">
+                                Place name
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="place-name"
+                                name="place-name"
+                                placeholder="Enter the place name"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- =========================
+                             CATEGORY
+                             RADIO BUTTONS
+                        ========================== -->
+
+                        <fieldset>
+
+                            <legend>
+                                What type of place is it?
+                            </legend>
+
+
+                            <div class="choice-list">
+
+
+                                <div class="choice-item">
+
+                                    <input
+                                        type="radio"
+                                        id="category-food"
+                                        name="category"
+                                        value="food"
+                                        required
+                                    >
+
+
+                                    <label for="category-food">
+                                        Food place
+                                    </label>
+
+                                </div>
+
+
+                                <div class="choice-item">
+
+                                    <input
+                                        type="radio"
+                                        id="category-study"
+                                        name="category"
+                                        value="study-spot"
+                                    >
+
+
+                                    <label for="category-study">
+                                        Study spot
+                                    </label>
+
+                                </div>
+
+
+                                <div class="choice-item">
+
+                                    <input
+                                        type="radio"
+                                        id="category-outdoors"
+                                        name="category"
+                                        value="outdoors"
+                                    >
+
+
+                                    <label for="category-outdoors">
+                                        Outdoors
+                                    </label>
+
+                                </div>
+
+
+                            </div>
+
+                        </fieldset>
+
+
+
+                        <!-- =========================
+                             WHAT'S GOOD ABOUT IT
+                             CHECKBOXES
+                        ========================== -->
+
+                        <fieldset>
+
+                            <legend>
+                                What's good about it?
+                            </legend>
+
+
+                            <div class="choice-list">
+
+
+                                <div class="choice-item">
+
+                                    <input
+                                        type="checkbox"
+                                        id="good-affordable"
+                                        name="good-about-it"
+                                        value="affordable"
+                                    >
+
+
+                                    <label for="good-affordable">
+                                        Affordable
+                                    </label>
+
+                                </div>
+
+
+                                <div class="choice-item">
+
+                                    <input
+                                        type="checkbox"
+                                        id="good-wifi"
+                                        name="good-about-it"
+                                        value="good-wifi"
+                                    >
+
+
+                                    <label for="good-wifi">
+                                        Good Wi-Fi
+                                    </label>
+
+                                </div>
+
+
+                                <div class="choice-item">
+
+                                    <input
+                                        type="checkbox"
+                                        id="good-quiet"
+                                        name="good-about-it"
+                                        value="quiet"
+                                    >
+
+
+                                    <label for="good-quiet">
+                                        Quiet
+                                    </label>
+
+                                </div>
+
+
+                            </div>
+
+                        </fieldset>
+
+
+
+                        <!-- =========================
+                             CONTACT EMAIL
+                        ========================== -->
+
+                        <div class="suggest-group">
+
+                            <label for="suggest-email">
+                                Contact email
+                            </label>
+
+
+                            <input
+                                type="email"
+                                id="suggest-email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- =========================
+                             SUBMIT BUTTON
+                        ========================== -->
+
+                        <button
+                            type="submit"
+                            class="suggest-button"
+                        >
+                            Suggest this place →
+                        </button>
+
+
+
+                        <!-- =========================
+                             SUCCESS MESSAGE
+                        ========================== -->
+
+                        <div
+                            class="suggest-success"
+                            id="suggestSuccess"
+                            role="status"
+                            aria-live="polite"
+                            hidden
+                        >
+
+                            <strong>
+                                Suggestion sent! 🎉
+                            </strong>
+
+
+                            <span>
+                                Thank you for helping improve
+                                TUP Eats. Your suggested place
+                                has been submitted.
+                            </span>
+
+                        </div>
+
+
+                    </form>
+
+                </div>
 
             </section>
 
@@ -362,7 +625,6 @@
 
 
         </section>
-
 
     </main>
 
@@ -406,7 +668,76 @@
     </footer>
 
 
+
+    <!-- =================================================
+         SUGGEST FORM JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+        const suggestForm =
+            document.getElementById("suggestForm");
+
+        const suggestSuccess =
+            document.getElementById("suggestSuccess");
+
+
+        suggestForm.addEventListener(
+            "submit",
+            function (event) {
+
+                /*
+                    Prevent the browser from actually
+                    submitting the form.
+
+                    This also prevents the HTTP 405 error.
+                */
+
+                event.preventDefault();
+
+
+                /*
+                    Check all required fields.
+                */
+
+                if (!suggestForm.checkValidity()) {
+
+                    suggestForm.reportValidity();
+
+                    return;
+
+                }
+
+
+                /*
+                    Show the success message.
+                */
+
+                suggestSuccess.hidden = false;
+
+
+                /*
+                    Clear the form after submission.
+                */
+
+                suggestForm.reset();
+
+
+                /*
+                    Scroll to the success message.
+                */
+
+                suggestSuccess.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest"
+                });
+
+            }
+        );
+
+    </script>
+
+
 </body>
 
 </html>
-
