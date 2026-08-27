@@ -1502,3 +1502,575 @@ footer p {
     }
 
 }
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+.contact-form {
+    width: 100%;
+
+    margin-top: 38px;
+}
+
+
+.contact-form fieldset {
+    min-width: 0;
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 22px;
+
+    background: var(--cream);
+}
+
+
+.contact-form legend {
+    padding: 0 12px;
+
+    color: var(--brown);
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.02em;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+
+.form-group label {
+    color: var(--brown);
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    background: var(--white);
+
+    color: var(--brown);
+
+    font-size: 0.95rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a89583;
+}
+
+
+.form-group select {
+    cursor: pointer;
+}
+
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #dfc8ae;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--orange);
+
+    background: var(--white);
+
+    box-shadow:
+        0 0 0 4px rgba(217, 119, 6, 0.1);
+}
+
+
+/* =====================================================
+   FORM BUTTON
+===================================================== */
+
+.form-button {
+    width: 100%;
+
+    min-height: 54px;
+
+    padding: 15px 24px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background: var(--brown);
+
+    color: var(--white);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(44, 33, 24, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.form-button:hover {
+    transform: translateY(-3px);
+
+    background: var(--orange);
+
+    box-shadow:
+        0 15px 30px rgba(217, 119, 6, 0.2);
+}
+
+
+.form-button:active {
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   FORM SUCCESS MESSAGE
+===================================================== */
+
+.form-success {
+    margin-top: 20px;
+
+    padding: 18px 20px;
+
+    border: 1px solid #d8c5ad;
+
+    border-radius: 16px;
+
+    background: #fffaf3;
+
+    color: var(--brown);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    animation: successAppear 0.35s ease;
+}
+
+
+.form-success strong {
+    color: var(--orange-dark);
+
+    font-size: 0.95rem;
+}
+
+
+.form-success span {
+    color: var(--brown-light);
+
+    font-size: 0.85rem;
+}
+
+
+@keyframes successAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   CONTACT FORM - MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .contact-form {
+        margin-top: 30px;
+    }
+
+
+    .contact-form fieldset {
+        padding: 24px 18px;
+
+        border-radius: 18px;
+    }
+
+
+    .contact-form legend {
+        font-size: 1rem;
+    }
+
+
+    .form-group {
+        margin-bottom: 19px;
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 13px 14px;
+
+        font-size: 0.9rem;
+    }
+
+
+    .form-button {
+        min-height: 52px;
+
+        font-size: 0.9rem;
+    }
+
+}
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+.contact-form {
+    width: 100%;
+    margin-top: 38px;
+}
+
+
+.contact-form fieldset {
+    min-width: 0;
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 22px;
+
+    background: var(--cream);
+}
+
+
+.contact-form legend {
+    padding: 0 12px;
+
+    color: var(--brown);
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* =====================================================
+   FORM GROUPS
+===================================================== */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+
+.form-group label {
+    color: var(--brown);
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    background: var(--white);
+
+    color: var(--brown);
+
+    font-size: 0.95rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a89583;
+}
+
+
+.form-group select {
+    cursor: pointer;
+}
+
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #dfc8ae;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--orange);
+
+    background: var(--white);
+
+    box-shadow:
+        0 0 0 4px rgba(217, 119, 6, 0.1);
+}
+
+
+/* =====================================================
+   SEND BUTTON
+===================================================== */
+
+.form-button {
+    width: 100%;
+
+    min-height: 54px;
+
+    padding: 15px 24px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background: var(--brown);
+
+    color: var(--white);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(44, 33, 24, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.form-button:hover {
+    transform: translateY(-3px);
+
+    background: var(--orange);
+
+    box-shadow:
+        0 15px 30px rgba(217, 119, 6, 0.2);
+}
+
+
+.form-button:active {
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   SUCCESS MESSAGE
+===================================================== */
+
+/*
+   IMPORTANT:
+   This keeps the message completely invisible
+   before the form is submitted.
+*/
+
+.form-success[hidden] {
+    display: none;
+}
+
+
+.form-success {
+    margin-top: 20px;
+
+    padding: 18px 20px;
+
+    border: 1px solid #d8c5ad;
+
+    border-radius: 16px;
+
+    background: #fffaf3;
+
+    color: var(--brown);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    animation: successAppear 0.35s ease;
+}
+
+
+.form-success strong {
+    color: var(--orange-dark);
+
+    font-size: 0.95rem;
+}
+
+
+.form-success span {
+    color: var(--brown-light);
+
+    font-size: 0.85rem;
+}
+
+
+@keyframes successAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   CONTACT FORM - MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .contact-form {
+        margin-top: 30px;
+    }
+
+
+    .contact-form fieldset {
+        padding: 24px 18px;
+
+        border-radius: 18px;
+    }
+
+
+    .contact-form legend {
+        font-size: 1rem;
+    }
+
+
+    .form-group {
+        margin-bottom: 19px;
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 13px 14px;
+
+        font-size: 0.9rem;
+    }
+
+
+    .form-button {
+        min-height: 52px;
+
+        font-size: 0.9rem;
+    }
+
+}

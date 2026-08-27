@@ -56,7 +56,11 @@
                     </li>
 
                     <li>
-                        <a href="contact.html">
+                        <a
+                            href="contact.html"
+                            class="active"
+                            aria-current="page"
+                        >
                             Contact
                         </a>
                     </li>
@@ -86,6 +90,9 @@
 
             <div class="contact-content">
 
+
+                <!-- INTRO -->
+
                 <p class="eyebrow">
                     GET IN TOUCH
                 </p>
@@ -102,11 +109,16 @@
                 <p class="contact-intro">
 
                     Have a food recommendation, suggestion,
-                    or question about TUP Eats? You can reach
-                    me through the contact details below.
+                    or question about TUP Eats? Send me a message
+                    and help make this food guide even better.
 
                 </p>
 
+
+
+                <!-- =========================
+                     CONTACT DETAILS
+                ========================== -->
 
                 <ul class="contact-list">
 
@@ -140,12 +152,187 @@
                 </ul>
 
 
+
+                <!-- =========================
+                     CONTACT FORM
+                ========================== -->
+
+                <form
+                    class="contact-form"
+                    id="contactForm"
+                >
+
+                    <fieldset>
+
+                        <legend>
+                            Your details
+                        </legend>
+
+
+
+                        <!-- NAME -->
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- SUBJECT -->
+
+                        <div class="form-group">
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <select
+                                id="subject"
+                                name="subject"
+                                required
+                            >
+
+                                <option
+                                    value=""
+                                    selected
+                                    disabled
+                                >
+                                    Choose a subject
+                                </option>
+
+                                <option value="suggest-place">
+                                    Suggest a place
+                                </option>
+
+                                <option value="correct-detail">
+                                    Correct a detail
+                                </option>
+
+                                <option value="ask-question">
+                                    Ask a question
+                                </option>
+
+                                <option value="share-feedback">
+                                    Share feedback
+                                </option>
+
+                                <option value="something-else">
+                                    Something else
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- MESSAGE -->
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Write your message here..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <!-- SEND BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="form-button"
+                        >
+                            Send message
+                        </button>
+
+
+
+                        <!-- =========================
+                             SUCCESS MESSAGE
+
+                             THIS IS HIDDEN INITIALLY.
+                             IT ONLY APPEARS AFTER
+                             THE USER SENDS THE FORM.
+                        ========================== -->
+
+                        <div
+                            class="form-success"
+                            id="formSuccess"
+                            role="status"
+                            aria-live="polite"
+                            hidden
+                        >
+
+                            <strong>
+                                Message sent!
+                            </strong>
+
+                            <span>
+                                Thanks for helping improve TUP Eats.
+                            </span>
+
+                        </div>
+
+
+                    </fieldset>
+
+                </form>
+
+
+
+                <!-- NOTE -->
+
                 <p class="contact-note">
 
                     I would be happy to hear your suggestions
                     for affordable places to eat around TUP Manila.
 
                 </p>
+
 
             </div>
 
@@ -189,9 +376,73 @@
 
             </p>
 
+
         </div>
 
     </footer>
+
+
+
+    <!-- =========================
+         CONTACT FORM SCRIPT
+    ========================== -->
+
+    <script>
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+        const formSuccess =
+            document.getElementById("formSuccess");
+
+
+        contactForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            /*
+                Check if all required fields
+                are properly completed.
+            */
+
+            if (!contactForm.checkValidity()) {
+
+                contactForm.reportValidity();
+
+                return;
+
+            }
+
+
+            /*
+                Show the success message
+                ONLY after clicking Send message.
+            */
+
+            formSuccess.hidden = false;
+
+
+            /*
+                Clear the form after sending.
+            */
+
+            contactForm.reset();
+
+
+            /*
+                Move the screen to the
+                success message.
+            */
+
+            formSuccess.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+
+        });
+
+    </script>
 
 
 </body>
