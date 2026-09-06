@@ -9,6 +9,7 @@
    ===================================================== */
 
 :root {
+
     /* Brand colors */
     --brand-color: #d97706;
     --brand-dark: #b45309;
@@ -29,7 +30,7 @@
 
     /* Additional colors */
     --selection-background: #d97706;
-    --placeholder-color: #a89583;
+    --placeholder-color: #8c7765;
     --success-background: #fffaf3;
     --success-border: #d8c5ad;
 
@@ -67,9 +68,12 @@ html {
 
 body {
     font-family: "Poppins", Arial, sans-serif;
+
     background: var(--light-background);
     color: var(--dark-ink);
+
     line-height: 1.6;
+
     overflow-x: hidden;
 }
 
@@ -95,13 +99,16 @@ select {
     color: var(--white);
 }
 
+
+/* Visible keyboard focus */
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-    outline: 3px solid var(--focus-ring);
-    outline-offset: 4px;
+    outline: 3px solid var(--brand-color);
+    outline-offset: 3px;
 }
 
 
@@ -122,6 +129,7 @@ select:focus-visible {
     width: 100%;
 
     background: var(--nav-background);
+
     border-bottom: 1px solid var(--border-color);
 
     backdrop-filter: blur(14px);
@@ -130,11 +138,13 @@ select:focus-visible {
 
 .nav-container {
     width: min(1180px, 92%);
+
     min-height: 82px;
 
     margin: 0 auto;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -153,6 +163,7 @@ nav {
 
 .nav-links {
     list-style: none;
+
     padding: 0;
 
     margin: 0;
@@ -163,7 +174,6 @@ nav {
 .nav-links li {
     list-style: none;
 
-    /* Required by the activity */
     display: inline-block;
 
     margin-left: 30px;
@@ -185,8 +195,6 @@ nav {
     font-size: 0.95rem;
     font-weight: 600;
 
-    text-decoration: none;
-
     transition:
         color 0.25s ease,
         transform 0.25s ease;
@@ -196,6 +204,7 @@ nav {
     content: "";
 
     position: absolute;
+
     left: 0;
     bottom: 2px;
 
@@ -211,6 +220,7 @@ nav {
 
 .nav-links a:hover {
     color: var(--brand-color);
+
     transform: translateY(-1px);
 }
 
@@ -241,6 +251,7 @@ footer {
     padding: 45px 7%;
 
     background: var(--dark-ink);
+
     color: var(--white);
 }
 
@@ -250,6 +261,7 @@ footer {
     margin: 0 auto;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -324,11 +336,13 @@ footer p {
     position: relative;
 
     width: 100%;
+
     min-height: 680px;
 
     overflow: hidden;
 
     display: flex;
+
     align-items: center;
 
     padding: 90px 7%;
@@ -342,6 +356,7 @@ footer p {
     z-index: 2;
 
     width: 100%;
+
     max-width: 650px;
 }
 
@@ -382,6 +397,7 @@ footer p {
     color: var(--muted-grey);
 
     font-size: 1.05rem;
+
     line-height: 1.75;
 }
 
@@ -403,6 +419,7 @@ footer p {
     border-radius: 999px;
 
     background: var(--dark-ink);
+
     color: var(--white);
 
     font-size: 0.95rem;
@@ -449,6 +466,7 @@ footer p {
     height: clamp(300px, 32vw, 390px);
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -466,6 +484,7 @@ footer p {
 }
 
 @keyframes floatFood {
+
     0%,
     100% {
         transform: translateY(0);
@@ -567,6 +586,55 @@ footer p {
 
 
 /* -----------------------------------------------------
+   PLACE CARD
+   ----------------------------------------------------- */
+
+/*
+    Module 5.4 requirement:
+    Reusable class for every place entry.
+*/
+
+.place-card {
+    padding: 16px;
+
+    margin-bottom: 20px;
+
+    border-left: 6px solid var(--brand-color);
+
+    border-radius: 24px;
+
+    background: var(--light-background);
+}
+
+
+/* Keep the place images looking clean
+   after adding card padding. */
+
+.place-card .food-image {
+    border-radius: 16px;
+}
+
+
+/* Distinct place name */
+
+.place-card .food-info h3 {
+    color: var(--brand-dark);
+
+    font-size: 1.65rem;
+
+    font-weight: 800;
+}
+
+
+/* Adjust inner spacing because
+   the card already has padding. */
+
+.place-card .food-info {
+    padding: 24px 8px 8px;
+}
+
+
+/* -----------------------------------------------------
    FOOD IMAGE
    ----------------------------------------------------- */
 
@@ -574,6 +642,7 @@ footer p {
     position: relative;
 
     width: 100%;
+
     height: 260px;
 
     overflow: hidden;
@@ -809,6 +878,7 @@ footer p {
     padding: 110px 0;
 
     display: flex;
+
     align-items: center;
 }
 
@@ -861,6 +931,7 @@ footer p {
 
 .contact-list {
     list-style: none;
+
     padding: 0;
 
     display: grid;
@@ -880,6 +951,7 @@ footer p {
     background: var(--light-background);
 
     display: flex;
+
     flex-direction: column;
 
     gap: 5px;
@@ -948,6 +1020,9 @@ footer p {
     margin-top: 38px;
 }
 
+
+/* Fieldset */
+
 .contact-form fieldset {
     min-width: 0;
 
@@ -960,10 +1035,13 @@ footer p {
     background: var(--light-background);
 }
 
+
+/* Legend */
+
 .contact-form legend {
     padding: 0 12px;
 
-    color: var(--dark-ink);
+    color: var(--brand-color);
 
     font-size: 1.15rem;
 
@@ -971,6 +1049,9 @@ footer p {
 
     letter-spacing: -0.02em;
 }
+
+
+/* Form groups */
 
 .form-group {
     display: flex;
@@ -992,6 +1073,9 @@ footer p {
     letter-spacing: 0.04em;
 }
 
+
+/* Inputs, select, textarea */
+
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -1009,22 +1093,29 @@ footer p {
 
     font-size: 0.95rem;
 
-    outline: none;
-
     transition:
         border-color 0.25s ease,
         box-shadow 0.25s ease,
         background 0.25s ease;
 }
 
+
+/* Placeholder */
+
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: var(--placeholder-color);
 }
 
+
+/* Select */
+
 .form-group select {
     cursor: pointer;
 }
+
+
+/* Textarea */
 
 .form-group textarea {
     min-height: 150px;
@@ -1034,15 +1125,28 @@ footer p {
     line-height: 1.6;
 }
 
+
+/* Hover */
+
 .form-group input:hover,
 .form-group select:hover,
 .form-group textarea:hover {
     border-color: var(--border-hover);
 }
 
+
+/* -----------------------------------------------------
+   REQUIRED VISIBLE FOCUS STATE
+   ----------------------------------------------------- */
+
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
+
+    outline: 3px solid var(--brand-color);
+
+    outline-offset: 2px;
+
     border-color: var(--brand-color);
 
     background: var(--white);
@@ -1077,8 +1181,7 @@ footer p {
 
     cursor: pointer;
 
-    box-shadow:
-        0 10px 25px rgba(44, 33, 24, 0.12);
+    box-shadow: var(--shadow-button);
 
     transition:
         transform 0.3s ease,
@@ -1142,6 +1245,7 @@ footer p {
 }
 
 @keyframes successAppear {
+
     from {
         opacity: 0;
 
@@ -1480,8 +1584,6 @@ footer p {
 
     font-size: 0.95rem;
 
-    outline: none;
-
     transition:
         border-color 0.25s ease,
         box-shadow 0.25s ease;
@@ -1499,6 +1601,11 @@ footer p {
 
 .suggest-group input[type="text"]:focus,
 .suggest-group input[type="email"]:focus {
+
+    outline: 3px solid var(--brand-color);
+
+    outline-offset: 2px;
+
     border-color: var(--brand-color);
 
     box-shadow:
@@ -1597,8 +1704,7 @@ footer p {
 
     cursor: pointer;
 
-    box-shadow:
-        0 10px 25px rgba(44, 33, 24, 0.12);
+    box-shadow: var(--shadow-button);
 
     transition:
         transform 0.3s ease,
@@ -1662,6 +1768,7 @@ footer p {
 }
 
 @keyframes suggestSuccessAppear {
+
     from {
         opacity: 0;
 
@@ -1940,6 +2047,32 @@ footer p {
         border-radius: 20px;
     }
 
+
+    /* PLACE CARD */
+
+    .place-card {
+        padding: 16px;
+
+        margin-bottom: 18px;
+
+        border-left-width: 5px;
+
+        border-radius: 20px;
+    }
+
+    .place-card .food-image {
+        border-radius: 14px;
+    }
+
+    .place-card .food-info {
+        padding: 22px 4px 4px;
+    }
+
+    .place-card .food-info h3 {
+        font-size: 1.45rem;
+    }
+
+
     .food-image {
         height: 240px;
     }
@@ -2015,6 +2148,41 @@ footer p {
 
     .contact-list li {
         padding: 18px;
+    }
+
+
+    /* CONTACT FORM */
+
+    .contact-form {
+        margin-top: 30px;
+    }
+
+    .contact-form fieldset {
+        padding: 24px 18px;
+
+        border-radius: 18px;
+    }
+
+    .contact-form legend {
+        font-size: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 19px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 13px 14px;
+
+        font-size: 0.9rem;
+    }
+
+    .form-button {
+        min-height: 52px;
+
+        font-size: 0.9rem;
     }
 
 
@@ -2130,41 +2298,6 @@ footer p {
     }
 
 
-    /* CONTACT FORM */
-
-    .contact-form {
-        margin-top: 30px;
-    }
-
-    .contact-form fieldset {
-        padding: 24px 18px;
-
-        border-radius: 18px;
-    }
-
-    .contact-form legend {
-        font-size: 1rem;
-    }
-
-    .form-group {
-        margin-bottom: 19px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        padding: 13px 14px;
-
-        font-size: 0.9rem;
-    }
-
-    .form-button {
-        min-height: 52px;
-
-        font-size: 0.9rem;
-    }
-
-
     /* FOOTER */
 
     footer {
@@ -2265,6 +2398,23 @@ footer p {
         padding: 6px 9px;
 
         font-size: 0.7rem;
+    }
+
+
+    /* PLACE CARD */
+
+    .place-card {
+        padding: 14px;
+
+        margin-bottom: 16px;
+    }
+
+    .place-card .food-info {
+        padding: 20px 4px 4px;
+    }
+
+    .place-card .food-info h3 {
+        font-size: 1.3rem;
     }
 
 
