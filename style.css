@@ -230,7 +230,6 @@ select:focus-visible {
    between the navigation links.
 
    There is NO display: inline-block on li.
-   Flexbox now controls the layout.
 */
 
 .navbar nav {
@@ -256,10 +255,6 @@ select:focus-visible {
 
 }
 
-
-/*
-   Flexbox replaces the old inline-block layout.
-*/
 
 .nav-links li {
 
@@ -592,21 +587,47 @@ select:focus-visible {
 
 
 /* =====================================================
-   11. FOOD GRID
+   11. PLACE GRID — ACTIVITY 6.4
    ===================================================== */
 
-.food-grid {
+/*
+   Activity 6.4:
+   The place cards use Flexbox instead of CSS Grid.
+
+   flex-wrap allows the cards to move to another
+   row when there is not enough space.
+
+   gap creates the spacing between cards.
+
+   No media queries are needed for the card layout.
+*/
+
+.place-grid {
 
     width: min(1180px, 100%);
 
     margin: 0 auto;
 
-    display: grid;
+    display: flex;
 
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+    flex-wrap: wrap;
 
-    gap: 28px;
+    gap: 24px;
+
+    align-items: stretch;
+
+}
+
+
+/*
+   Activity 6.4:
+   Each card can grow, shrink, and starts with
+   a target width of about 240px.
+*/
+
+.place-card {
+
+    flex: 1 1 240px;
 
 }
 
@@ -1979,13 +2000,6 @@ footer .copyright {
     }
 
 
-    .food-grid {
-
-        gap: 22px;
-
-    }
-
-
     .about-section {
 
         gap: 55px;
@@ -2058,14 +2072,6 @@ footer .copyright {
         right: -110px;
 
         opacity: 0.3;
-
-    }
-
-
-    .food-grid {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
 
     }
 
@@ -2263,14 +2269,12 @@ footer .copyright {
     }
 
 
-    .food-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 22px;
-
-    }
-
+    /*
+       Activity 6.4:
+       No grid-template-columns are used here.
+       The place cards automatically wrap using
+       flex-wrap and flex: 1 1 240px.
+    */
 
     .food-card {
 
