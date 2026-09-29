@@ -10,7 +10,9 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>TUP Eats | Affordable Eats Near TUP Manila</title>
+    <title>
+        TUP Eats | Affordable Eats Near TUP Manila
+    </title>
 
     <link
         rel="stylesheet"
@@ -22,21 +24,411 @@
 
 <body>
 
-    <!-- =================================================
-         PAGE GRID WRAPPER
-         Activity 7.3: CSS Grid Page Skeleton
-         ================================================= -->
 
-    <div class="page">
+<div class="page">
+
+
+    <!-- =================================================
+    HEADER & NAVIGATION
+    ================================================= -->
+
+    <header class="navbar">
+
+        <h1 class="site-title">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                TUP<span>Eats.</span>
+            </a>
+
+        </h1>
+
+
+        <nav aria-label="Main navigation">
+
+            <ul class="nav-links">
+
+                <li>
+                    <a
+                        href="index.html"
+                        class="active"
+                        aria-current="page"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =================================================
+    SIDEBAR
+    ================================================= -->
+
+    <aside class="sidebar">
+
+        <p class="sidebar-label">
+            TUP EATS GUIDE
+        </p>
+
+        <h2>
+            Quick guide
+        </h2>
+
+
+        <nav
+            class="sidebar-nav"
+            aria-label="Guide navigation"
+        >
+
+            <ul>
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#places">
+                        Places
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About the Guide
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <div class="sidebar-tip">
+
+            <strong>
+                Quick Tip
+            </strong>
+
+            <p>
+                Check the place descriptions and details
+                before deciding where to eat. The guide
+                focuses on affordable and convenient
+                options for students.
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================================
+    MAIN CONTENT
+    ================================================= -->
+
+    <main>
 
 
         <!-- =================================================
-             HEADER & NAVIGATION
-             ================================================= -->
+        HERO SECTION
+        ================================================= -->
 
-        <header class="navbar">
+        <section
+            class="hero"
+            id="home"
+        >
 
-            <h1 class="site-title">
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    A TUP MANILA FOOD GUIDE
+                </p>
+
+                <h2>
+                    Affordable eats
+                    <span>near campus.</span>
+                </h2>
+
+                <p class="hero-description">
+                    Good food doesn't have to be expensive.
+                    Discover simple, affordable, and satisfying
+                    places to eat around TUP Manila.
+                </p>
+
+                <a
+                    href="#places"
+                    class="hero-button"
+                >
+                    Explore Places →
+                </a>
+
+            </div>
+
+
+            <div class="hero-decoration">
+
+                <div class="food-circle">
+
+                    <span>
+                        🍜
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+        PLACES SECTION
+        ================================================= -->
+
+        <section
+            class="places-section"
+            id="places"
+        >
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    MY FOOD PICKS
+                </p>
+
+                <h2>
+                    Places worth
+                    <span>trying.</span>
+                </h2>
+
+                <p>
+                    These are three food places near TUP Manila
+                    that I personally enjoy. I chose them because
+                    they are affordable, convenient, and perfect
+                    for students who want a good meal without
+                    spending too much.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+            PLACE CARDS
+            Activity 6.4 — FLEXBOX
+            ================================================= -->
+
+            <div class="place-grid">
+
+
+                <!-- MAMI KARENDERYA -->
+
+                <article class="food-card place-card">
+
+                    <div class="food-image mami-image">
+
+                        <img
+                            src="images/mami.jpg"
+                            alt="Food and dining area at Mami Karenderya near TUP Manila"
+                        >
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <p class="food-number">
+                            01
+                        </p>
+
+                        <h3>
+                            Mami Karenderya
+                        </h3>
+
+                        <p class="food-location">
+                            Budget-friendly Filipino food near TUP Manila.
+                        </p>
+
+                        <p class="food-description">
+                            I like eating at Mami Karenderya because
+                            the food is simple, filling, and affordable.
+                            It is one of my choices when I want a quick
+                            meal after class. I also like that I can
+                            enjoy a satisfying meal without spending too much.
+                        </p>
+
+                        <div class="food-meta">
+
+                            <span>
+                                ₱ Budget-friendly
+                            </span>
+
+                            <span>
+                                📍 Near TUP
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="places/mami-karenderya.html"
+                            class="read-more"
+                        >
+                            Read more →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SEDDIE CARINDERYA -->
+
+                <article class="food-card place-card">
+
+                    <div class="food-image seddie-image">
+
+                        <img
+                            src="images/seddie.jpg"
+                            alt="Seddie Carinderya food place near TUP Manila"
+                        >
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <p class="food-number">
+                            02
+                        </p>
+
+                        <h3>
+                            Seddie Carinderya
+                        </h3>
+
+                        <p class="food-location">
+                            Filipino carinderia in Ermita.
+                        </p>
+
+                        <p class="food-description">
+                            Seddie Carinderya is one of my favorite
+                            places to eat with my girlfriend. We usually
+                            come here at night to eat barbecue because
+                            it is tasty and affordable. The place is
+                            simple and comfortable, which makes our time
+                            together feel more special.
+                        </p>
+
+                        <div class="food-meta">
+
+                            <span>
+                                ₱ Budget-friendly
+                            </span>
+
+                            <span>
+                                📍 Ermita
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ALIA'S GOTO -->
+
+                <article class="food-card place-card">
+
+                    <div class="food-image goto-image">
+
+                        <img
+                            src="images/alia's-goto.jpg"
+                            alt="Bowl of goto at Alia's Goto near TUP Manila"
+                        >
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <p class="food-number">
+                            03
+                        </p>
+
+                        <h3>
+                            Alia's Goto
+                        </h3>
+
+                        <p class="food-location">
+                            Affordable goto and comfort food near TUP Manila.
+                        </p>
+
+                        <p class="food-description">
+                            I would recommend Alia's Goto because it
+                            is one of my favorite places to eat because
+                            of its delicious lugaw. I often come here,
+                            especially when I want something warm and filling.
+                            Their lugaw tastes even better with chili oil.
+                            For me, even just lugaw with chili oil is already enough.
+                        </p>
+
+                        <div class="food-meta">
+
+                            <span>
+                                ₱ Budget-friendly
+                            </span>
+
+                            <span>
+                                📍 Near TUP
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================================
+    FOOTER
+    ================================================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
 
                 <a
                     href="index.html"
@@ -45,471 +437,22 @@
                     TUP<span>Eats.</span>
                 </a>
 
-            </h1>
+                <p>
+                    Affordable eats near TUP Manila.
+                </p>
 
+            </div>
 
-            <nav aria-label="Main navigation">
-
-                <ul class="nav-links">
-
-                    <li>
-                        <a
-                            href="index.html"
-                            class="active"
-                            aria-current="page"
-                        >
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">
-                            About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </header>
-
-
-
-        <!-- =================================================
-             SIDEBAR
-             ================================================= -->
-
-        <aside class="sidebar">
-
-            <p class="sidebar-label">
-                TUP EATS GUIDE
+            <p class="copyright">
+                © 2026 TUP Eats. Student Food Guide.
             </p>
 
-            <h2>
-                Quick guide
-            </h2>
+        </div>
 
-            <nav
-                class="sidebar-nav"
-                aria-label="Guide navigation"
-            >
+    </footer>
 
-                <ul>
 
-                    <li>
-                        <a href="#home">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#places">
-                            Places
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">
-                            About the Guide
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-
-            <div class="sidebar-tip">
-
-                <strong>
-                    Quick Tip
-                </strong>
-
-                <p>
-                    Check the place descriptions and details
-                    before deciding where to eat. The guide
-                    focuses on affordable and convenient
-                    options for students.
-                </p>
-
-            </div>
-
-        </aside>
-
-
-
-        <!-- =================================================
-             MAIN CONTENT
-             ================================================= -->
-
-        <main>
-
-
-            <!-- =================================================
-                 HERO SECTION
-                 ================================================= -->
-
-            <section
-                class="hero"
-                id="home"
-            >
-
-                <div class="hero-content">
-
-                    <p class="eyebrow">
-                        A TUP MANILA FOOD GUIDE
-                    </p>
-
-
-                    <h2>
-                        Affordable eats
-                        <span>near campus.</span>
-                    </h2>
-
-
-                    <p class="hero-description">
-
-                        Good food doesn't have to be expensive.
-                        Discover simple, affordable, and satisfying
-                        places to eat around TUP Manila.
-
-                    </p>
-
-
-                    <a
-                        href="#places"
-                        class="hero-button"
-                    >
-                        Explore Places →
-                    </a>
-
-                </div>
-
-
-                <div class="hero-decoration">
-
-                    <div class="food-circle">
-
-                        <span>🍜</span>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-
-            <!-- =================================================
-                 PLACES SECTION
-                 ================================================= -->
-
-            <section
-                class="places-section"
-                id="places"
-            >
-
-                <div class="section-heading">
-
-                    <p class="eyebrow">
-                        MY FOOD PICKS
-                    </p>
-
-
-                    <h2>
-                        Places worth
-                        <span>trying.</span>
-                    </h2>
-
-
-                    <p>
-
-                        These are three food places near TUP Manila
-                        that I personally enjoy. I chose them because
-                        they are affordable, convenient, and perfect
-                        for students who want a good meal without
-                        spending too much.
-
-                    </p>
-
-                </div>
-
-
-
-                <!-- =================================================
-                     PLACE CARDS
-                     Activity 6.4: Flexbox
-                     ================================================= -->
-
-                <div class="place-grid">
-
-
-                    <!-- MAMI KARENDERYA -->
-
-                    <article class="food-card place-card">
-
-                        <div class="food-image mami-image">
-
-                            <img
-                                src="images/mami.jpg"
-                                alt="Food and dining area at Mami Karenderya near TUP Manila"
-                            >
-
-                        </div>
-
-
-                        <div class="food-info">
-
-                            <p class="food-number">
-                                01
-                            </p>
-
-
-                            <h3>
-                                Mami Karenderya
-                            </h3>
-
-
-                            <p class="food-location">
-
-                                Budget-friendly Filipino food
-                                near TUP Manila.
-
-                            </p>
-
-
-                            <p class="food-description">
-
-                                I like eating at Mami Karenderya
-                                because the food is simple, filling,
-                                and affordable. It is one of my choices
-                                when I want a quick meal after class.
-                                I also like that I can enjoy a satisfying
-                                meal without spending too much.
-
-                            </p>
-
-
-                            <div class="food-meta">
-
-                                <span>
-                                    ₱ Budget-friendly
-                                </span>
-
-                                <span>
-                                    📍 Near TUP
-                                </span>
-
-                            </div>
-
-
-                            <a
-                                href="places/mami-karenderya.html"
-                                class="read-more"
-                            >
-                                Read more →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- SEDDIE CARINDERYA -->
-
-                    <article class="food-card place-card">
-
-                        <div class="food-image seddie-image">
-
-                            <img
-                                src="images/seddie.jpg"
-                                alt="Seddie Carinderya food place near TUP Manila"
-                            >
-
-                        </div>
-
-
-                        <div class="food-info">
-
-                            <p class="food-number">
-                                02
-                            </p>
-
-
-                            <h3>
-                                Seddie Carinderya
-                            </h3>
-
-
-                            <p class="food-location">
-
-                                Filipino carinderia in Ermita.
-
-                            </p>
-
-
-                            <p class="food-description">
-
-                                Seddie Carinderya is one of my favorite
-                                places to eat with my girlfriend. We usually
-                                come here at night to eat barbecue because
-                                it is tasty and affordable. The place is
-                                simple and comfortable, which makes our time
-                                together feel more special. Even though it is
-                                just a simple meal, eating here with her feels
-                                romantic and memorable.
-
-                            </p>
-
-
-                            <div class="food-meta">
-
-                                <span>
-                                    ₱ Budget-friendly
-                                </span>
-
-                                <span>
-                                    📍 Ermita
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- ALIA'S GOTO -->
-
-                    <article class="food-card place-card">
-
-                        <div class="food-image goto-image">
-
-                            <img
-                                src="images/alia's-goto.jpg"
-                                alt="Bowl of goto at Alia's Goto near TUP Manila"
-                            >
-
-                        </div>
-
-
-                        <div class="food-info">
-
-                            <p class="food-number">
-                                03
-                            </p>
-
-
-                            <h3>
-                                Alia's Goto
-                            </h3>
-
-
-                            <p class="food-location">
-
-                                Affordable goto and comfort food
-                                near TUP Manila.
-
-                            </p>
-
-
-                            <p class="food-description">
-
-                                I would recommend Alia's Goto because
-                                it is one of my favorite places to eat
-                                because of its delicious lugaw. I often
-                                come here, especially when I want something
-                                warm and filling. Their lugaw tastes even
-                                better with chili oil.
-
-                                For me, even just lugaw with chili oil is
-                                already enough. It is simple, affordable,
-                                and one of my favorite meals. I enjoy eating
-                                goto here because it is a simple meal that
-                                feels perfect before a tiring day.
-
-                            </p>
-
-
-                            <div class="food-meta">
-
-                                <span>
-                                    ₱ Budget-friendly
-                                </span>
-
-                                <span>
-                                    📍 Near TUP
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-            </section>
-
-
-        </main>
-
-
-
-        <!-- =================================================
-             FOOTER
-             ================================================= -->
-
-        <footer>
-
-            <div class="footer-content">
-
-                <div>
-
-                    <a
-                        href="index.html"
-                        class="logo"
-                    >
-                        TUP<span>Eats.</span>
-                    </a>
-
-
-                    <p>
-                        Affordable eats near TUP Manila.
-                    </p>
-
-                </div>
-
-
-                <p class="copyright">
-
-                    © 2026 TUP Eats.
-                    Student Food Guide.
-
-                </p>
-
-            </div>
-
-        </footer>
-
-
-    </div>
+</div>
 
 
 </body>
