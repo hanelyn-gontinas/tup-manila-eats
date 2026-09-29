@@ -22,292 +22,21 @@
 
 <body>
 
-
     <!-- =================================================
-         HEADER & NAVIGATION
+         PAGE GRID WRAPPER
+         Activity 7.3: CSS Grid Page Skeleton
          ================================================= -->
 
-    <header class="navbar">
+    <div class="page">
 
-        <h1 class="site-title">
 
-            <a
-                href="index.html"
-                class="logo"
-            >
-                TUP<span>Eats.</span>
-            </a>
+        <!-- =================================================
+             HEADER & NAVIGATION
+             ================================================= -->
 
-        </h1>
+        <header class="navbar">
 
-
-        <nav aria-label="Main navigation">
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html">
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        href="contact.html"
-                        class="active"
-                        aria-current="page"
-                    >
-                        Contact
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-
-
-    <!-- =================================================
-         MAIN CONTENT
-         ================================================= -->
-
-    <main>
-
-        <section class="contact-section">
-
-            <div class="contact-content">
-
-
-                <!-- INTRO -->
-
-                <p class="eyebrow">
-                    GET IN TOUCH
-                </p>
-
-
-                <h2>
-                    Let's
-                    <span>connect.</span>
-                </h2>
-
-
-                <p class="contact-intro">
-
-                    Have a food recommendation, suggestion,
-                    or question about TUP Eats? Send me a message
-                    and help make this food guide even better.
-
-                </p>
-
-
-
-                <!-- CONTACT DETAILS -->
-
-                <ul class="contact-list">
-
-                    <li>
-
-                        <strong>
-                            Email
-                        </strong>
-
-                        <a href="mailto:tupeats@gmail.com">
-                            tupeats@gmail.com
-                        </a>
-
-                    </li>
-
-
-                    <li>
-
-                        <strong>
-                            School
-                        </strong>
-
-                        <span>
-                            Technological University of the Philippines - Manila
-                        </span>
-
-                    </li>
-
-                </ul>
-
-
-
-                <!-- CONTACT FORM -->
-
-                <form
-                    class="contact-form"
-                    id="contactForm"
-                >
-
-                    <fieldset>
-
-                        <legend>
-                            Your details
-                        </legend>
-
-
-                        <!-- NAME -->
-
-                        <div class="form-group">
-
-                            <label for="name">
-                                Name
-                            </label>
-
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder="Enter your name"
-                                autocomplete="name"
-                                required
-                            >
-
-                        </div>
-
-
-                        <!-- EMAIL -->
-
-                        <div class="form-group">
-
-                            <label for="email">
-                                Email
-                            </label>
-
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="Enter your email"
-                                autocomplete="email"
-                                required
-                            >
-
-                        </div>
-
-
-                        <!-- SUBJECT -->
-
-                        <div class="form-group">
-
-                            <label for="subject">
-                                Subject
-                            </label>
-
-                            <select
-                                id="subject"
-                                name="subject"
-                            >
-
-                                <option value="food-recommendation">
-                                    Food recommendation
-                                </option>
-
-                                <option value="question">
-                                    Question
-                                </option>
-
-                                <option value="suggestion">
-                                    Suggestion
-                                </option>
-
-                                <option value="other">
-                                    Something else
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <!-- MESSAGE -->
-
-                        <div class="form-group">
-
-                            <label for="message">
-                                Message
-                            </label>
-
-                            <textarea
-                                id="message"
-                                name="message"
-                                placeholder="Write your message here"
-                                required
-                            ></textarea>
-
-                        </div>
-
-
-                        <!-- SUBMIT -->
-
-                        <button
-                            type="submit"
-                            class="form-button"
-                        >
-                            Send message
-                        </button>
-
-
-                    </fieldset>
-
-                </form>
-
-
-
-                <!-- SUCCESS MESSAGE -->
-
-                <div
-                    class="form-success"
-                    id="formSuccess"
-                    hidden
-                >
-
-                    <strong>
-                        Message sent!
-                    </strong>
-
-                    <span>
-                        Thanks for helping improve TUP Eats.
-                    </span>
-
-                </div>
-
-
-                <p class="contact-intro">
-
-                    I would be happy to hear your suggestions
-                    for affordable places to eat around TUP Manila.
-
-                </p>
-
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =================================================
-         FOOTER
-         ================================================= -->
-
-    <footer>
-
-        <div class="footer-content">
-
-            <div>
+            <h1 class="site-title">
 
                 <a
                     href="index.html"
@@ -316,73 +45,426 @@
                     TUP<span>Eats.</span>
                 </a>
 
+            </h1>
+
+
+            <nav aria-label="Main navigation">
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="active"
+                            aria-current="page"
+                        >
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+            <p class="sidebar-label">
+                TUP EATS GUIDE
+            </p>
+
+            <h2>
+                Get in touch
+            </h2>
+
+
+            <nav
+                class="sidebar-nav"
+                aria-label="Contact navigation"
+            >
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#places">
+                            Food Places
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="sidebar-active"
+                        >
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <div class="sidebar-tip">
+
+                <strong>
+                    Quick Tip
+                </strong>
 
                 <p>
-                    Affordable eats near TUP Manila.
+                    Have a food recommendation or question?
+                    Use the contact form to share your message
+                    and help improve TUP Eats.
                 </p>
 
             </div>
 
-
-            <p class="copyright">
-
-                © 2026 TUP Eats.
-                Student Food Guide.
-
-            </p>
-
-        </div>
-
-    </footer>
+        </aside>
 
 
 
-    <!-- =================================================
-         CONTACT FORM SCRIPT
-         ================================================= -->
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
 
-    <script>
+        <main>
 
-        const contactForm =
-            document.getElementById("contactForm");
+            <section class="contact-section">
 
-        const formSuccess =
-            document.getElementById("formSuccess");
+                <div class="contact-content">
 
 
-        contactForm.addEventListener(
-            "submit",
-            function (event) {
+                    <!-- INTRO -->
 
-                event.preventDefault();
+                    <p class="eyebrow">
+                        GET IN TOUCH
+                    </p>
 
 
-                if (!contactForm.checkValidity()) {
+                    <h2>
+                        Let's
+                        <span>connect.</span>
+                    </h2>
 
-                    contactForm.reportValidity();
 
-                    return;
+                    <p class="contact-intro">
+
+                        Have a food recommendation, suggestion,
+                        or question about TUP Eats? Send me a message
+                        and help make this food guide even better.
+
+                    </p>
+
+
+
+                    <!-- CONTACT DETAILS -->
+
+                    <ul class="contact-list">
+
+                        <li>
+
+                            <strong>
+                                Email
+                            </strong>
+
+                            <a href="mailto:tupeats@gmail.com">
+                                tupeats@gmail.com
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                School
+                            </strong>
+
+                            <span>
+                                Technological University of the Philippines - Manila
+                            </span>
+
+                        </li>
+
+                    </ul>
+
+
+
+                    <!-- CONTACT FORM -->
+
+                    <form
+                        class="contact-form"
+                        id="contactForm"
+                    >
+
+                        <fieldset>
+
+                            <legend>
+                                Your details
+                            </legend>
+
+
+                            <!-- NAME -->
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- SUBJECT -->
+
+                            <div class="form-group">
+
+                                <label for="subject">
+                                    Subject
+                                </label>
+
+                                <select
+                                    id="subject"
+                                    name="subject"
+                                >
+
+                                    <option value="food-recommendation">
+                                        Food recommendation
+                                    </option>
+
+                                    <option value="question">
+                                        Question
+                                    </option>
+
+                                    <option value="suggestion">
+                                        Suggestion
+                                    </option>
+
+                                    <option value="other">
+                                        Something else
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- MESSAGE -->
+
+                            <div class="form-group">
+
+                                <label for="message">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    placeholder="Write your message here"
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <!-- SUBMIT -->
+
+                            <button
+                                type="submit"
+                                class="form-button"
+                            >
+                                Send message
+                            </button>
+
+
+                        </fieldset>
+
+                    </form>
+
+
+
+                    <!-- SUCCESS MESSAGE -->
+
+                    <div
+                        class="form-success"
+                        id="formSuccess"
+                        hidden
+                    >
+
+                        <strong>
+                            Message sent!
+                        </strong>
+
+                        <span>
+                            Thanks for helping improve TUP Eats.
+                        </span>
+
+                    </div>
+
+
+                    <p class="contact-intro">
+
+                        I would be happy to hear your suggestions
+                        for affordable places to eat around TUP Manila.
+
+                    </p>
+
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
+
+        <footer>
+
+            <div class="footer-content">
+
+                <div>
+
+                    <a
+                        href="index.html"
+                        class="logo"
+                    >
+                        TUP<span>Eats.</span>
+                    </a>
+
+
+                    <p>
+                        Affordable eats near TUP Manila.
+                    </p>
+
+                </div>
+
+
+                <p class="copyright">
+
+                    © 2026 TUP Eats.
+                    Student Food Guide.
+
+                </p>
+
+            </div>
+
+        </footer>
+
+
+
+        <!-- =================================================
+             CONTACT FORM SCRIPT
+             ================================================= -->
+
+        <script>
+
+            const contactForm =
+                document.getElementById("contactForm");
+
+            const formSuccess =
+                document.getElementById("formSuccess");
+
+
+            contactForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    if (!contactForm.checkValidity()) {
+
+                        contactForm.reportValidity();
+
+                        return;
+
+                    }
+
+
+                    formSuccess.hidden = false;
+
+                    contactForm.reset();
+
+
+                    formSuccess.scrollIntoView({
+
+                        behavior: "smooth",
+
+                        block: "nearest"
+
+                    });
 
                 }
+            );
+
+        </script>
 
 
-                formSuccess.hidden = false;
-
-                contactForm.reset();
-
-
-                formSuccess.scrollIntoView({
-
-                    behavior: "smooth",
-
-                    block: "nearest"
-
-                });
-
-            }
-        );
-
-    </script>
+    </div>
 
 
 </body>

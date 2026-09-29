@@ -1,6 +1,7 @@
 /* =====================================================
    TUP EATS
    Affordable Eats Near TUP Manila
+   Activity 7.3 — Give Your Guide a Grid Layout
    ===================================================== */
 
 
@@ -47,31 +48,39 @@ html {
 
 
 body {
+
     margin: 0;
 
     font-family: "Poppins", Arial, sans-serif;
 
     background: var(--cream);
+
     color: var(--brown);
 
     line-height: 1.6;
 
     overflow-x: hidden;
+
 }
 
 
 img {
+
     display: block;
 
     max-width: 100%;
+
     height: auto;
+
 }
 
 
 a {
+
     color: inherit;
 
     text-decoration: none;
+
 }
 
 
@@ -79,18 +88,25 @@ button,
 input,
 textarea,
 select {
+
     font: inherit;
+
 }
 
 
 button {
+
     cursor: pointer;
+
 }
 
 
 ::selection {
+
     background: var(--orange);
+
     color: var(--white);
+
 }
 
 
@@ -112,20 +128,93 @@ select:focus-visible {
 
 
 /* =====================================================
-   4. HEADER / NAVIGATION
+   4. PAGE GRID — ACTIVITY 7.3
    ===================================================== */
 
 /*
-   Activity 6.3:
-   The header is a flex container.
+   Activity 7.3:
+   The page uses CSS Grid for the main page skeleton.
 
-   It has exactly two direct children:
-   1. h1.site-title
-   2. nav
+   Two columns:
+   220px = sidebar
+   1fr   = main content
 
-   justify-content: space-between places the
-   guide name on the far left and the navigation
-   on the far right.
+   Three rows:
+   masthead = header
+   side/main = sidebar + main
+   foot     = footer
+
+   Every row has exactly two cells.
+*/
+
+.page {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    grid-template-areas:
+
+        "masthead masthead"
+
+        "side main"
+
+        "foot foot";
+
+    gap: 16px;
+
+}
+
+
+/*
+   Every major page region receives
+   its required grid-area.
+*/
+
+.page > header {
+
+    grid-area: masthead;
+
+}
+
+
+.page > aside {
+
+    grid-area: side;
+
+}
+
+
+.page > main {
+
+    grid-area: main;
+
+    min-width: 0;
+
+}
+
+
+.page > footer {
+
+    grid-area: foot;
+
+}
+
+
+/* =====================================================
+   5. HEADER / NAVIGATION
+   Activity 6.3 — FLEXBOX
+   ===================================================== */
+
+/*
+   The page skeleton uses GRID.
+
+   The header itself continues to use FLEXBOX.
+
+   This keeps the header logo and navigation
+   arranged horizontally.
 */
 
 .navbar {
@@ -161,11 +250,6 @@ select:focus-visible {
 }
 
 
-/*
-   The guide name is the first direct child
-   of the header.
-*/
-
 .site-title {
 
     margin: 0;
@@ -178,7 +262,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   5. LOGO
+   6. LOGO
    ===================================================== */
 
 .logo {
@@ -205,7 +289,9 @@ select:focus-visible {
 
 
 .logo span {
+
     color: var(--orange);
+
 }
 
 
@@ -219,18 +305,8 @@ select:focus-visible {
 
 
 /* =====================================================
-   6. NAVIGATION LINKS
+   7. NAVIGATION LINKS — FLEXBOX
    ===================================================== */
-
-/*
-   Activity 6.3:
-   The navigation list is its own flex container.
-
-   The gap property controls the spacing
-   between the navigation links.
-
-   There is NO display: inline-block on li.
-*/
 
 .navbar nav {
 
@@ -336,16 +412,170 @@ select:focus-visible {
 
 
 /* =====================================================
-   7. HERO
+   8. SIDEBAR — ACTIVITY 7.3
    ===================================================== */
 
-/*
-   Activity 6.3:
-   The hero has enough height for vertical centering.
+.sidebar {
 
-   .hero-content is centered horizontally and vertically
-   inside the hero section.
-*/
+    align-self: start;
+
+    position: sticky;
+
+    top: 98px;
+
+    margin: 0 0 0 16px;
+
+    padding: 24px 18px;
+
+    border: 1px solid var(--border);
+
+    border-left: 4px solid var(--orange);
+
+    border-radius: 18px;
+
+    background: var(--cream-dark);
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+.sidebar-label {
+
+    margin-bottom: 8px;
+
+    color: var(--orange);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+}
+
+
+.sidebar h2 {
+
+    margin-bottom: 20px;
+
+    color: var(--brown);
+
+    font-size: 1.25rem;
+
+    line-height: 1.2;
+
+}
+
+
+.sidebar-nav ul {
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.sidebar-nav li {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.sidebar-nav a {
+
+    display: block;
+
+    padding: 9px 10px;
+
+    border-radius: 8px;
+
+    color: var(--brown);
+
+    font-size: 0.88rem;
+
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.sidebar-nav a:hover {
+
+    background: var(--white);
+
+    color: var(--orange);
+
+    transform: translateX(3px);
+
+}
+
+
+.sidebar-nav a.sidebar-active {
+
+    background: var(--white);
+
+    color: var(--orange);
+
+}
+
+
+.sidebar-tip {
+
+    margin-top: 25px;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    background: var(--white);
+
+}
+
+
+.sidebar-tip strong {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--brown);
+
+    font-size: 0.8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+.sidebar-tip p {
+
+    color: var(--brown-light);
+
+    font-size: 0.78rem;
+
+    line-height: 1.65;
+
+}
+
+
+/* =====================================================
+   9. HERO
+   ===================================================== */
 
 .hero {
 
@@ -438,7 +668,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   8. BUTTON
+   10. BUTTON
    ===================================================== */
 
 .hero-button {
@@ -485,7 +715,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   9. HERO DECORATION
+   11. HERO DECORATION
    ===================================================== */
 
 .hero-decoration {
@@ -532,7 +762,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   10. PLACES SECTION
+   12. PLACES SECTION
    ===================================================== */
 
 .places-section {
@@ -587,19 +817,18 @@ select:focus-visible {
 
 
 /* =====================================================
-   11. PLACE GRID — ACTIVITY 6.4
+   13. PLACE GRID — ACTIVITY 6.4 FLEXBOX
    ===================================================== */
 
 /*
-   Activity 6.4:
-   The place cards use Flexbox instead of CSS Grid.
+   IMPORTANT:
 
-   flex-wrap allows the cards to move to another
-   row when there is not enough space.
+   This remains FLEXBOX.
 
-   gap creates the spacing between cards.
+   Activity 7.3 requires Grid for the page skeleton,
+   but Activity 6.4 requires Flexbox for the place cards.
 
-   No media queries are needed for the card layout.
+   Therefore, we do NOT replace this with CSS Grid.
 */
 
 .place-grid {
@@ -619,12 +848,6 @@ select:focus-visible {
 }
 
 
-/*
-   Activity 6.4:
-   Each card can grow, shrink, and starts with
-   a target width of about 240px.
-*/
-
 .place-card {
 
     flex: 1 1 240px;
@@ -633,7 +856,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   12. FOOD CARD
+   14. FOOD CARD
    ===================================================== */
 
 .food-card {
@@ -668,7 +891,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   13. FOOD IMAGE
+   15. FOOD IMAGE
    ===================================================== */
 
 .food-image {
@@ -707,7 +930,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   14. FOOD INFORMATION
+   16. FOOD INFORMATION
    ===================================================== */
 
 .food-info {
@@ -812,7 +1035,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   15. READ MORE
+   17. READ MORE
    ===================================================== */
 
 .read-more {
@@ -844,7 +1067,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   16. ABOUT PAGE
+   18. ABOUT PAGE
    ===================================================== */
 
 .about-page {
@@ -955,7 +1178,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   17. CONTACT PAGE
+   19. CONTACT PAGE
    ===================================================== */
 
 .contact-section {
@@ -1030,7 +1253,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   18. CONTACT LIST
+   20. CONTACT LIST
    ===================================================== */
 
 .contact-list {
@@ -1112,7 +1335,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   19. CONTACT FORM
+   21. CONTACT FORM
    ===================================================== */
 
 .contact-form {
@@ -1218,7 +1441,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   20. FORM BUTTON
+   22. FORM BUTTON
    ===================================================== */
 
 .form-button,
@@ -1264,7 +1487,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   21. FORM SUCCESS MESSAGE
+   23. FORM SUCCESS MESSAGE
    ===================================================== */
 
 .form-success {
@@ -1314,7 +1537,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   22. PLACE DETAIL PAGE
+   24. PLACE DETAIL PAGE
    ===================================================== */
 
 .place-detail {
@@ -1329,7 +1552,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   23. PLACE DETAIL HEADER
+   25. PLACE DETAIL HEADER
    ===================================================== */
 
 .place-detail-header {
@@ -1377,7 +1600,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   24. PLACE DETAIL IMAGE
+   26. PLACE DETAIL IMAGE
    ===================================================== */
 
 .place-detail-image {
@@ -1409,7 +1632,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   25. PLACE DESCRIPTION + DETAILS
+   27. PLACE DESCRIPTION + DETAILS
    ===================================================== */
 
 .place-detail-content {
@@ -1473,7 +1696,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   26. PLACE DETAILS BOX
+   28. PLACE DETAILS BOX
    ===================================================== */
 
 .place-details-box {
@@ -1510,7 +1733,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   27. DETAILS TABLE
+   29. DETAILS TABLE
    ===================================================== */
 
 .details-table-wrapper {
@@ -1597,7 +1820,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   28. SUGGEST-A-PLACE SECTION
+   30. SUGGEST-A-PLACE SECTION
    ===================================================== */
 
 .suggest-section {
@@ -1664,7 +1887,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   29. SUGGEST FORM
+   31. SUGGEST FORM
    ===================================================== */
 
 .suggest-form {
@@ -1726,7 +1949,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   30. SUGGEST FORM FIELDSETS
+   32. SUGGEST FORM FIELDSETS
    ===================================================== */
 
 .suggest-form fieldset {
@@ -1760,7 +1983,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   31. RADIO AND CHECKBOX CHOICES
+   33. RADIO AND CHECKBOX CHOICES
    ===================================================== */
 
 .choice-list {
@@ -1821,7 +2044,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   32. SUGGEST BUTTON
+   34. SUGGEST BUTTON
    ===================================================== */
 
 .suggest-button {
@@ -1832,7 +2055,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   33. SUGGEST SUCCESS MESSAGE
+   35. SUGGEST SUCCESS MESSAGE
    ===================================================== */
 
 .suggest-success {
@@ -1884,7 +2107,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   34. PLACE DETAIL NAVIGATION
+   36. PLACE DETAIL NAVIGATION
    ===================================================== */
 
 .place-detail-navigation {
@@ -1897,7 +2120,7 @@ select:focus-visible {
 
 
 /* =====================================================
-   35. FOOTER
+   37. FOOTER
    ===================================================== */
 
 footer {
@@ -1963,7 +2186,7 @@ footer .copyright {
 
 
 /* =====================================================
-   36. TABLET
+   38. TABLET
    ===================================================== */
 
 @media (max-width: 1100px) {
@@ -2021,10 +2244,94 @@ footer .copyright {
 
 
 /* =====================================================
-   37. SMALL TABLET
+   39. SMALL TABLET
    ===================================================== */
 
 @media (max-width: 900px) {
+
+    /*
+       The page skeleton still uses named grid areas,
+       but the sidebar moves above the main content.
+    */
+
+    .page {
+
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+
+            "masthead"
+
+            "side"
+
+            "main"
+
+            "foot";
+
+    }
+
+
+    .page > header {
+
+        grid-area: masthead;
+
+    }
+
+
+    .page > aside {
+
+        grid-area: side;
+
+    }
+
+
+    .page > main {
+
+        grid-area: main;
+
+    }
+
+
+    .page > footer {
+
+        grid-area: foot;
+
+    }
+
+
+    .sidebar {
+
+        position: static;
+
+        margin: 16px 5% 0;
+
+    }
+
+
+    .sidebar-nav ul {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 6px;
+
+    }
+
+
+    .sidebar-nav a {
+
+        padding: 8px 10px;
+
+    }
+
+
+    .sidebar-tip {
+
+        max-width: 650px;
+
+    }
+
 
     .navbar {
 
@@ -2133,16 +2440,10 @@ footer .copyright {
 
 
 /* =====================================================
-   38. MOBILE
+   40. MOBILE
    ===================================================== */
 
 @media (max-width: 650px) {
-
-    /*
-       The header remains a horizontal flexbox.
-       The guide name stays on the left and
-       navigation stays on the right.
-    */
 
     .navbar {
 
@@ -2174,6 +2475,31 @@ footer .copyright {
         padding: 5px 0;
 
         font-size: 0.78rem;
+
+    }
+
+
+    .sidebar {
+
+        margin-left: 5%;
+
+        margin-right: 5%;
+
+        padding: 20px 15px;
+
+    }
+
+
+    .sidebar-nav ul {
+
+        gap: 4px;
+
+    }
+
+
+    .sidebar-nav a {
+
+        font-size: 0.8rem;
 
     }
 
@@ -2271,9 +2597,7 @@ footer .copyright {
 
     /*
        Activity 6.4:
-       No grid-template-columns are used here.
-       The place cards automatically wrap using
-       flex-wrap and flex: 1 1 240px.
+       The place cards continue using Flexbox.
     */
 
     .food-card {
@@ -2603,7 +2927,7 @@ footer .copyright {
 
 
 /* =====================================================
-   39. VERY SMALL MOBILE
+   41. VERY SMALL MOBILE
    ===================================================== */
 
 @media (max-width: 420px) {
@@ -2638,6 +2962,15 @@ footer .copyright {
     .nav-links a {
 
         font-size: 0.7rem;
+
+    }
+
+
+    .sidebar {
+
+        margin-left: 4%;
+
+        margin-right: 4%;
 
     }
 
@@ -2845,7 +3178,7 @@ footer .copyright {
 
 
 /* =====================================================
-   40. REDUCED MOTION
+   42. REDUCED MOTION
    ===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
