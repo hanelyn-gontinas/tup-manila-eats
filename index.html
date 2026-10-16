@@ -234,12 +234,23 @@
                     spending too much.
                 </p>
 
+                <!-- JavaScript computed value -->
+
+                <p>
+                    <strong>
+                        Places reviewed:
+                    </strong>
+
+                    <span id="placeCount">
+                        0
+                    </span>
+                </p>
+
             </div>
 
 
             <!-- =================================================
             PLACE CARDS
-            Activity 6.4 — FLEXBOX
             ================================================= -->
 
             <div class="place-grid">
@@ -281,6 +292,7 @@
                             enjoy a satisfying meal without spending too much.
                         </p>
 
+
                         <div class="food-meta">
 
                             <span>
@@ -292,6 +304,7 @@
                             </span>
 
                         </div>
+
 
                         <a
                             href="places/mami-karenderya.html"
@@ -341,6 +354,7 @@
                             simple and comfortable, which makes our time
                             together feel more special.
                         </p>
+
 
                         <div class="food-meta">
 
@@ -396,6 +410,7 @@
                             For me, even just lugaw with chili oil is already enough.
                         </p>
 
+
                         <div class="food-meta">
 
                             <span>
@@ -441,9 +456,22 @@
                     Affordable eats near TUP Manila.
                 </p>
 
+                <!-- JavaScript writes the guide name here -->
+
+                <p>
+                    Guide:
+                    <span id="guideName">
+                        TUP Eats
+                    </span>
+                </p>
+
             </div>
 
-            <p class="copyright">
+
+            <p
+                class="copyright"
+                id="copyright"
+            >
                 © 2026 TUP Eats. Student Food Guide.
             </p>
 
@@ -454,6 +482,13 @@
 
 </div>
 
+
+<!-- =================================================
+EXTERNAL JAVASCRIPT
+Must be before closing body tag
+================================================= -->
+
+<script src="script.js"></script>
 
 </body>
 

@@ -384,9 +384,20 @@
                     Affordable eats near TUP Manila.
                 </p>
 
+                <p>
+                    Guide:
+                    <span id="guideName">
+                        TUP Eats
+                    </span>
+                </p>
+
             </div>
 
-            <p class="copyright">
+
+            <p
+                class="copyright"
+                id="copyright"
+            >
                 © 2026 TUP Eats. Student Food Guide.
             </p>
 
@@ -395,52 +406,14 @@
     </footer>
 
 
-    <!-- =================================================
-    CONTACT FORM SCRIPT
-    ================================================= -->
-
-    <script>
-
-        const contactForm =
-            document.getElementById("contactForm");
-
-        const formSuccess =
-            document.getElementById("formSuccess");
-
-
-        contactForm.addEventListener(
-            "submit",
-            function (event) {
-
-                event.preventDefault();
-
-
-                if (!contactForm.checkValidity()) {
-
-                    contactForm.reportValidity();
-
-                    return;
-                }
-
-
-                formSuccess.hidden = false;
-
-                contactForm.reset();
-
-
-                formSuccess.scrollIntoView({
-                    behavior: "smooth",
-                    block: "nearest"
-                });
-
-            }
-        );
-
-    </script>
-
-
 </div>
 
+
+<!-- =================================================
+EXTERNAL JAVASCRIPT
+================================================= -->
+
+<script src="script.js"></script>
 
 </body>
 

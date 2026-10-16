@@ -643,9 +643,20 @@
                     Affordable eats near TUP Manila.
                 </p>
 
+                <p>
+                    Guide:
+                    <span id="guideName">
+                        TUP Eats
+                    </span>
+                </p>
+
             </div>
 
-            <p class="copyright">
+
+            <p
+                class="copyright"
+                id="copyright"
+            >
                 © 2026 TUP Eats. Student Food Guide.
             </p>
 
@@ -654,52 +665,18 @@
     </footer>
 
 
-    <!-- =================================================
-    SUGGEST FORM JAVASCRIPT
-    ================================================= -->
-
-    <script>
-
-        const suggestForm =
-            document.getElementById("suggestForm");
-
-        const suggestSuccess =
-            document.getElementById("suggestSuccess");
-
-
-        suggestForm.addEventListener(
-            "submit",
-            function (event) {
-
-                event.preventDefault();
-
-
-                if (!suggestForm.checkValidity()) {
-
-                    suggestForm.reportValidity();
-
-                    return;
-                }
-
-
-                suggestSuccess.hidden = false;
-
-                suggestForm.reset();
-
-
-                suggestSuccess.scrollIntoView({
-                    behavior: "smooth",
-                    block: "nearest"
-                });
-
-            }
-        );
-
-    </script>
-
-
 </div>
 
+
+<!-- =================================================
+EXTERNAL JAVASCRIPT
+
+IMPORTANT:
+This page is inside the places folder,
+so we need ../ to go back to the root.
+================================================= -->
+
+<script src="../script.js"></script>
 
 </body>
 
