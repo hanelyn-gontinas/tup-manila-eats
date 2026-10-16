@@ -1795,23 +1795,24 @@ Use min-width
     */
 
     .hero {
-        min-height: 650px;
+        min-height: 560px;
 
         flex-direction: row;
 
         justify-content: center;
 
-        padding: 90px 6%;
+        padding: 70px 6%;
     }
 
     .hero-content {
-        width: 55%;
+        width: 58%;
+        max-width: 760px;
 
         text-align: center;
     }
 
     .hero h2 {
-        font-size: clamp(3.5rem, 7vw, 6.5rem);
+        font-size: clamp(3.2rem, 5.5vw, 5.2rem);
     }
 
     .hero-description {
@@ -1833,7 +1834,7 @@ Use min-width
         z-index: 1;
 
         top: 50%;
-        right: -40px;
+        right: 2%;
 
         transform: translateY(-50%);
 
@@ -2037,23 +2038,23 @@ Use min-width
     }
 
     .hero {
-        min-height: 680px;
+        min-height: 600px;
 
-        padding-left: 7%;
-        padding-right: 7%;
+        padding-left: 6%;
+        padding-right: 6%;
     }
 
     .hero-decoration {
-        right: 5%;
+        right: 3%;
     }
 
     .food-circle {
-        width: 390px;
-        height: 390px;
+        width: 320px;
+        height: 320px;
     }
 
     .food-circle span {
-        font-size: 8rem;
+        font-size: 6.5rem;
     }
 
     .places-section {
